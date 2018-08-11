@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity{
         imgFavorite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), InfoActivity.class);
+                Intent i = new Intent(v.getContext(), SemesterActivity.class);
                 startActivity(i);
             }
         });
