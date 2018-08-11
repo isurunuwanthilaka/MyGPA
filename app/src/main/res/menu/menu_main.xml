@@ -5,4 +5,11 @@
     app:theme="@style/ToolBarStyle"
     >
 
+    <item
+        android:id="@+id/action_info"
+        android:orderInCategory="3"
+        android:title="Search"
+        android:icon="@drawable/action_info"
+        app:showAsAction="ifRoom" />
+
 </menu>
