@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:scrollbarAlwaysDrawHorizontalTrack="false"
         android:scrollbarAlwaysDrawVerticalTrack="false"
-        tools:context=".InfoActivity">
+        tools:context=".activity.InfoActivity">
 
         <TextView
             android:id="@+id/textView"

@@ -1,4 +1,4 @@
-package isumalab.entc;
+package isumalab.entc.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -6,14 +6,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-public class SemesterActivity extends AppCompatActivity {
+import isumalab.entc.R;
+
+public class InfoActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_semester);
+        setContentView(R.layout.activity_info);
 
         //adding toolbar
         toolbar = (Toolbar) findViewById(R.id.my_toolbar);
