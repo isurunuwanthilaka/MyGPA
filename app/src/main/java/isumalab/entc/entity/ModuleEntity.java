@@ -3,7 +3,6 @@ package isumalab.entc.entity;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
-import android.support.v4.app.NotificationCompat;
 
 @Entity
 public class ModuleEntity {
@@ -80,8 +79,7 @@ public class ModuleEntity {
     }
 
 
-    @PrimaryKey
-    @NonNull
+    @PrimaryKey(autoGenerate = true)
     private int id;
 
     @NonNull

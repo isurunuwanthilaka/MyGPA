@@ -6,6 +6,8 @@ import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 import android.arch.persistence.room.Update;
 
+import java.util.List;
+
 import isumalab.entc.entity.ModuleEntity;
 
 import static android.arch.persistence.room.OnConflictStrategy.IGNORE;
@@ -17,6 +19,9 @@ public interface ModuleDao {
 
     @Query("select module_name from ModuleEntity where id = 1")
     String getModuleNameById();
+
+    @Query("select module_name from ModuleEntity ")
+    List<String> getAllModuleName();
 
     @Query("DELETE FROM ModuleEntity")
     void deleteAll();
