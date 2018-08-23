@@ -4,4 +4,12 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="semCardColor">#1180FF</color>
     <color name="colorAccent">#FF4081</color>
+
+
+
+    <color name="buttonLabel">#d3d3d3</color>
+
+
+
+
 </resources>

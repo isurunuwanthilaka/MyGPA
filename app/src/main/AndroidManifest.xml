@@ -27,7 +27,7 @@
             />
 
         <activity
-            android:name=".activity.SemesterActivity"
+            android:name=".utils.SemesterActivity"
             android:label="Modules"
             android:theme="@style/AppTheme.NoActionBar"
             />
@@ -36,6 +36,9 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
+        <activity android:name="utils.NewWordActivity"></activity>
+
     </application>
+
 
 </manifest>
