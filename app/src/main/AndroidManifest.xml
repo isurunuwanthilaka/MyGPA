@@ -36,7 +36,10 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name="utils.NewWordActivity"></activity>
+        <activity
+            android:name=".utils.NewWordActivity"
+            android:label="Edit Module"
+            />
 
     </application>
 
