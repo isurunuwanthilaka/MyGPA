@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_scrollbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:soundEffectsEnabled="false"
+    android:scrollbarSize="0dp"
+    >
+
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        tools:context=".activity.MainActivity">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            style="@style/HeaderBar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:elevation="4dp" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="53dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textViewActiveCourse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/darker_gray"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Semesters"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:typeface="normal"
+                app:fontFamily="sans-serif" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/sem1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="40dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/colorPrimary" >
+
+                <RelativeLayout
+                    android:id="@+id/relative1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="98dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="8dp"
+                        android:layout_marginStart="0dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingLeft="4dp"
+                        android:paddingTop="4dp"
+                        android:text="Semester 1"
+                        android:textSize="18sp"
+                        android:visibility="visible"
+                        app:fontFamily="sans-serif" />
+
+                    <ImageView
+                        android:id="@+id/edit_sem"
+                        android:layout_width="33dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:visibility="visible"
+                        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/sem2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="98dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/colorPrimary" >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="98dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="8dp"
+                    android:layout_marginStart="0dp"
+                    android:background="@android:color/darker_gray"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="4dp"
+                    android:text="Semester 2"
+                    android:textSize="18sp"
+                    android:visibility="visible"
+                    app:fontFamily="sans-serif" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/sem3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="156dp"
+                app:cardBackgroundColor="@color/colorPrimary">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="98dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="8dp"
+                    android:layout_marginStart="0dp"
+                    android:background="@android:color/darker_gray"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="4dp"
+                    android:text="Semester 3"
+                    android:textSize="18sp"
+                    android:visibility="visible"
+                    app:fontFamily="sans-serif" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/sem4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="214dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/colorPrimary" >
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="98dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="8dp"
+                    android:layout_marginStart="0dp"
+                    android:background="@android:color/darker_gray"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="4dp"
+                    android:text="Semester 4"
+                    android:textSize="18sp"
+                    android:visibility="visible"
+                    app:fontFamily="sans-serif" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/sem5"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="272dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/colorPrimary" >
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="98dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="8dp"
+                    android:layout_marginStart="0dp"
+                    android:background="@android:color/darker_gray"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="4dp"
+                    android:text="Semester 5"
+                    android:textSize="18sp"
+                    android:visibility="visible"
+                    app:fontFamily="sans-serif" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/sem6"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="330dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/colorPrimary" >
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="98dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="8dp"
+                    android:layout_marginStart="0dp"
+                    android:background="@android:color/darker_gray"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="4dp"
+                    android:text="Semester 6"
+                    android:textSize="18sp"
+                    android:visibility="visible"
+                    app:fontFamily="sans-serif" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/sem7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="388dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/colorPrimary" >
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="98dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="8dp"
+                    android:layout_marginStart="0dp"
+                    android:background="@android:color/darker_gray"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="4dp"
+                    android:text="Semester 7"
+                    android:textSize="18sp"
+                    android:visibility="visible"
+                    app:fontFamily="sans-serif" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/sem8"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="446dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/colorPrimary" >
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="98dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="8dp"
+                    android:layout_marginStart="0dp"
+                    android:background="@android:color/darker_gray"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="4dp"
+                    android:text="Semester 8"
+                    android:textSize="18sp"
+                    android:visibility="visible"
+                    app:fontFamily="sans-serif" />
+            </android.support.v7.widget.CardView>
+
+        </android.support.v7.widget.CardView>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
