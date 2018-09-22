@@ -32,7 +32,7 @@
             android:text="Version - 0.0.1 beta\nShare your thoughts with us twitter/@isumalab\nCodebase - https://github.com/isurunuwanthilaka/ENTC-GPA-Wallet.git"
             android:textColor="@android:color/black"
             android:visibility="visible"
-            app:fontFamily="@font/anonymous_pro"
+            app:fontFamily="serif"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
