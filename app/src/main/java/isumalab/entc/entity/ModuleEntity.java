@@ -4,20 +4,46 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
-@Entity
+@Entity(tableName = "module_table")
 public class ModuleEntity {
+
+    @PrimaryKey(autoGenerate = true)
+    private int id;
+
+    @NonNull
+    private int semester_no;
+
+    @NonNull
+    private String module_name;
+
+    @NonNull
+    private String module_code;
+
+    @NonNull
+    private boolean gpa;
+
+    @NonNull
+    private int credit;
+
+    @NonNull
+    private boolean active;
+
+    private int score;
 
     @NonNull
     public int getCredit() {
+
         return credit;
     }
 
-    public void setCredit(@NonNull int credit) {
+    public void setCredit(@NonNull int credit)
+    {
         this.credit = credit;
     }
 
     @NonNull
     public boolean isActive() {
+
         return active;
     }
 
@@ -78,28 +104,5 @@ public class ModuleEntity {
         this.gpa = gpa;
     }
 
-
-    @PrimaryKey(autoGenerate = true)
-    private int id;
-
-    @NonNull
-    private int semester_no;
-
-    @NonNull
-    private String module_name;
-
-    @NonNull
-    private String module_code;
-
-    @NonNull
-    private boolean gpa;
-
-    @NonNull
-    private int credit;
-
-    @NonNull
-    private boolean active;
-
-    private int score;
 
 }
