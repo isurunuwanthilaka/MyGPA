@@ -24,9 +24,77 @@ public class MainActivity extends AppCompatActivity{
         toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(toolbar);
 
-        ImageView imgFavorite = (ImageView) findViewById(R.id.edit_sem);
-        imgFavorite.setClickable(true);
-        imgFavorite.setOnClickListener(new View.OnClickListener() {
+        ImageView imageView1 = (ImageView) findViewById(R.id.edit_sem1);
+        imageView1.setClickable(true);
+        imageView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), SemesterActivity.class);
+                startActivity(i);
+            }
+        });
+        ImageView imageView2 = (ImageView) findViewById(R.id.edit_sem2);
+        imageView2.setClickable(true);
+        imageView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), SemesterActivity.class);
+                startActivity(i);
+            }
+        });
+        ImageView imageView3 = (ImageView) findViewById(R.id.edit_sem3);
+        imageView3.setClickable(true);
+        imageView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), SemesterActivity.class);
+                startActivity(i);
+            }
+        });
+
+        ImageView imageView4 = (ImageView) findViewById(R.id.edit_sem4);
+        imageView4.setClickable(true);
+        imageView4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), SemesterActivity.class);
+                startActivity(i);
+            }
+        });
+
+        ImageView imageView5 = (ImageView) findViewById(R.id.edit_sem5);
+        imageView5.setClickable(true);
+        imageView5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), SemesterActivity.class);
+                startActivity(i);
+            }
+        });
+
+        ImageView imageView6 = (ImageView) findViewById(R.id.edit_sem6);
+        imageView6.setClickable(true);
+        imageView6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), SemesterActivity.class);
+                startActivity(i);
+            }
+        });
+
+        ImageView imageView7 = (ImageView) findViewById(R.id.edit_sem7);
+        imageView7.setClickable(true);
+        imageView7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), SemesterActivity.class);
+                startActivity(i);
+            }
+        });
+
+        ImageView imageView8 = (ImageView) findViewById(R.id.edit_sem8);
+        imageView8.setClickable(true);
+        imageView8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), SemesterActivity.class);
