@@ -14,10 +14,18 @@ public class ModuleListAdapter extends RecyclerView.Adapter<ModuleListAdapter.Mo
 
     class ModuleViewHolder extends RecyclerView.ViewHolder {
         private final TextView moduleItemView;
+        private final TextView moduleCode;
+        private final TextView moduleGpa;
+        private final TextView moduleCredit;
+        private final TextView moduleScore;
 
         private ModuleViewHolder(View itemView) {
             super(itemView);
             moduleItemView = itemView.findViewById(R.id.textView);
+            moduleCode = itemView.findViewById(R.id.textViewModuleCodeEdit);
+            moduleGpa = itemView.findViewById(R.id.textViewGPAEdit);
+            moduleCredit = itemView.findViewById(R.id.textViewCreditEdit);
+            moduleScore = itemView.findViewById(R.id.textViewScoreEdit);
         }
     }
 
@@ -36,6 +44,10 @@ public class ModuleListAdapter extends RecyclerView.Adapter<ModuleListAdapter.Mo
     public void onBindViewHolder(ModuleListAdapter.ModuleViewHolder holder, int position) {
         ModuleEntity current = mModules.get(position);
         holder.moduleItemView.setText(current.getModule_name());
+        holder.moduleCode.setText(current.getModule_code());
+        holder.moduleGpa.setText(String.valueOf(current.isGpa()));
+        holder.moduleCredit.setText(String.valueOf(current.getCredit()));
+        holder.moduleScore.setText(String.valueOf(current.getScore()));
     }
 
     public void setModules(List<ModuleEntity> modules){
