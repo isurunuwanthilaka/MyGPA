@@ -1,4 +1,4 @@
-package isumalab.entc.utils;
+package isumalab.entc.activity;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
@@ -18,13 +18,16 @@ import android.widget.Toast;
 import java.util.List;
 
 import isumalab.entc.R;
+import isumalab.entc.entity.ModuleEntity;
+import isumalab.entc.utils.ModuleListAdapter;
+import isumalab.entc.utils.ModuleViewModel;
 
 
-public class SemesterActivity extends AppCompatActivity {
+public class SemesterEightActivity extends AppCompatActivity {
 
-    public static final int NEW_WORD_ACTIVITY_REQUEST_CODE = 1;
+    public static final int NEW_MODULE_ACTIVITY_REQUEST_CODE = 1;
 
-    private WordViewModel mWordViewModel;
+    private ModuleViewModel mModuleViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,21 +38,21 @@ public class SemesterActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
-        final WordListAdapter adapter = new WordListAdapter(this);
+        final ModuleListAdapter adapter = new ModuleListAdapter(this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // Get a new or existing ViewModel from the ViewModelProvider.
-        mWordViewModel = ViewModelProviders.of(this).get(WordViewModel.class);
+        mModuleViewModel = ViewModelProviders.of(this).get(ModuleViewModel.class);
 
         // Add an observer on the LiveData returned by getAlphabetizedWords.
         // The onChanged() method fires when the observed data changes and the activity is
         // in the foreground.
-        mWordViewModel.getAllWords().observe(this, new Observer<List<Word>>() {
+        mModuleViewModel.getSemEightModules().observe(this, new Observer<List<ModuleEntity>>() {
             @Override
-            public void onChanged(@Nullable final List<Word> words) {
+            public void onChanged(@Nullable final List<ModuleEntity> modules) {
                 // Update the cached copy of the words in the adapter.
-                adapter.setWords(words);
+                adapter.setModules(modules);
             }
         });
 
@@ -57,8 +60,8 @@ public class SemesterActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SemesterActivity.this, NewWordActivity.class);
-                startActivityForResult(intent, NEW_WORD_ACTIVITY_REQUEST_CODE);
+                Intent intent = new Intent(SemesterEightActivity.this, NewModuleActivity.class);
+                startActivityForResult(intent, NEW_MODULE_ACTIVITY_REQUEST_CODE);
             }
         });
     }
@@ -81,9 +84,17 @@ public class SemesterActivity extends AppCompatActivity {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == NEW_WORD_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK) {
-            Word word = new Word(data.getStringExtra(NewWordActivity.EXTRA_REPLY));
-            mWordViewModel.insert(word);
+        if (requestCode == NEW_MODULE_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK) {
+            ModuleEntity moduleEntity = new ModuleEntity();
+            moduleEntity.setModule_name(data.getStringExtra(NewModuleActivity.EXTRA_REPLY));
+            moduleEntity.setCredit(3);
+            moduleEntity.setSemester_no(8);
+            moduleEntity.setModule_code("en0001");
+//            moduleEntity.setId(1);
+            moduleEntity.setActive(true);
+            moduleEntity.setScore(1);
+            moduleEntity.setGpa(true);
+            mModuleViewModel.insert(moduleEntity);
         } else {
             Toast.makeText(
                     getApplicationContext(),

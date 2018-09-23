@@ -41,6 +41,54 @@
             android:label="Edit Module"
             />
 
+        <activity
+            android:name=".activity.NewModuleActivity"
+            android:label="Add Module"
+            />
+
+        <activity
+            android:name=".activity.SemesterOneActivity"
+            android:label="Semester 1 "
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity
+            android:name=".activity.SemesterTwoActivity"
+            android:label="Semester 2 "
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity
+            android:name=".activity.SemesterThreeActivity"
+            android:label="Semester 3 "
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity
+            android:name=".activity.SemesterFourActivity"
+            android:label="Semester 4 "
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity
+            android:name=".activity.SemesterFiveActivity"
+            android:label="Semester 5 "
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity
+            android:name=".activity.SemesterSixActivity"
+            android:label="Semester 6 "
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+
+        <activity
+            android:name=".activity.SemesterSevenActivity"
+            android:label="Semester 7 "
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+
+        <activity
+            android:name=".activity.SemesterEightActivity"
+            android:label="Semester 8 "
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+
     </application>
 
 

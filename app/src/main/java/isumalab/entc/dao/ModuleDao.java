@@ -10,9 +10,7 @@ import android.arch.persistence.room.Update;
 import java.util.List;
 
 import isumalab.entc.entity.ModuleEntity;
-import isumalab.entc.utils.Word;
 
-import static android.arch.persistence.room.OnConflictStrategy.IGNORE;
 import static android.arch.persistence.room.OnConflictStrategy.REPLACE;
 
 

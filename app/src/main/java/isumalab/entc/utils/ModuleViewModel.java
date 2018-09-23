@@ -37,14 +37,14 @@ public class ModuleViewModel extends AndroidViewModel {
         mSemEightModules = mRepository.getSemEightModules();
     }
 
-    LiveData<List<ModuleEntity>> getSemOneModules() { return mSemOneModules; }
-    LiveData<List<ModuleEntity>> getSemTwoModules() { return mSemTwoModules; }
-    LiveData<List<ModuleEntity>> getSemThreeModules() { return mSemThreeModules; }
-    LiveData<List<ModuleEntity>> getSemFourModules() { return mSemFourModules; }
-    LiveData<List<ModuleEntity>> getSemFiveModules() { return mSemFiveModules; }
-    LiveData<List<ModuleEntity>> getSemSixModules() { return mSemSixModules; }
-    LiveData<List<ModuleEntity>> getSemSevenModules() { return mSemSevenModules; }
-    LiveData<List<ModuleEntity>> getSemEightModules() { return mSemEightModules; }
+    public LiveData<List<ModuleEntity>> getSemOneModules() { return mSemOneModules; }
+    public LiveData<List<ModuleEntity>> getSemTwoModules() { return mSemTwoModules; }
+    public LiveData<List<ModuleEntity>> getSemThreeModules() { return mSemThreeModules; }
+    public LiveData<List<ModuleEntity>> getSemFourModules() { return mSemFourModules; }
+    public LiveData<List<ModuleEntity>> getSemFiveModules() { return mSemFiveModules; }
+    public LiveData<List<ModuleEntity>> getSemSixModules() { return mSemSixModules; }
+    public LiveData<List<ModuleEntity>> getSemSevenModules() { return mSemSevenModules; }
+    public LiveData<List<ModuleEntity>> getSemEightModules() { return mSemEightModules; }
 
     public void insert(ModuleEntity moduleEntity) { mRepository.insert(moduleEntity); }
 }
