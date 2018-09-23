@@ -10,8 +10,6 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 
 import isumalab.entc.R;
-import isumalab.entc.utils.SemesterActivity;
-
 public class MainActivity extends AppCompatActivity{
 
     private Toolbar toolbar;
@@ -29,7 +27,7 @@ public class MainActivity extends AppCompatActivity{
         imageView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), SemesterActivity.class);
+                Intent i = new Intent(v.getContext(), SemesterOneActivity.class);
                 startActivity(i);
             }
         });
@@ -38,7 +36,7 @@ public class MainActivity extends AppCompatActivity{
         imageView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), SemesterActivity.class);
+                Intent i = new Intent(v.getContext(), SemesterTwoActivity.class);
                 startActivity(i);
             }
         });
@@ -47,7 +45,7 @@ public class MainActivity extends AppCompatActivity{
         imageView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), SemesterActivity.class);
+                Intent i = new Intent(v.getContext(), SemesterThreeActivity.class);
                 startActivity(i);
             }
         });
@@ -57,7 +55,7 @@ public class MainActivity extends AppCompatActivity{
         imageView4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), SemesterActivity.class);
+                Intent i = new Intent(v.getContext(), SemesterFourActivity.class);
                 startActivity(i);
             }
         });
@@ -67,7 +65,7 @@ public class MainActivity extends AppCompatActivity{
         imageView5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), SemesterActivity.class);
+                Intent i = new Intent(v.getContext(), SemesterFiveActivity.class);
                 startActivity(i);
             }
         });
@@ -77,7 +75,7 @@ public class MainActivity extends AppCompatActivity{
         imageView6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), SemesterActivity.class);
+                Intent i = new Intent(v.getContext(), SemesterSixActivity.class);
                 startActivity(i);
             }
         });
@@ -87,7 +85,7 @@ public class MainActivity extends AppCompatActivity{
         imageView7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), SemesterActivity.class);
+                Intent i = new Intent(v.getContext(), SemesterSevenActivity.class);
                 startActivity(i);
             }
         });
@@ -97,7 +95,7 @@ public class MainActivity extends AppCompatActivity{
         imageView8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), SemesterActivity.class);
+                Intent i = new Intent(v.getContext(), SemesterEightActivity.class);
                 startActivity(i);
             }
         });

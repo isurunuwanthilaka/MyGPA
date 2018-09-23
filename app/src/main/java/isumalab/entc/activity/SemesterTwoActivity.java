@@ -23,7 +23,7 @@ import isumalab.entc.utils.ModuleListAdapter;
 import isumalab.entc.utils.ModuleViewModel;
 
 
-public class SemesterOneActivity extends AppCompatActivity {
+public class SemesterTwoActivity extends AppCompatActivity {
 
     public static final int NEW_MODULE_ACTIVITY_REQUEST_CODE = 1;
 
@@ -48,7 +48,7 @@ public class SemesterOneActivity extends AppCompatActivity {
         // Add an observer on the LiveData returned by getAlphabetizedWords.
         // The onChanged() method fires when the observed data changes and the activity is
         // in the foreground.
-        mModuleViewModel.getSemOneModules().observe(this, new Observer<List<ModuleEntity>>() {
+        mModuleViewModel.getSemTwoModules().observe(this, new Observer<List<ModuleEntity>>() {
             @Override
             public void onChanged(@Nullable final List<ModuleEntity> modules) {
                 // Update the cached copy of the words in the adapter.
@@ -60,7 +60,7 @@ public class SemesterOneActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SemesterOneActivity.this, NewModuleActivity.class);
+                Intent intent = new Intent(SemesterTwoActivity.this, NewModuleActivity.class);
                 startActivityForResult(intent, NEW_MODULE_ACTIVITY_REQUEST_CODE);
             }
         });
@@ -88,7 +88,7 @@ public class SemesterOneActivity extends AppCompatActivity {
             ModuleEntity moduleEntity = new ModuleEntity();
             moduleEntity.setModule_name(data.getStringExtra(NewModuleActivity.EXTRA_REPLY));
             moduleEntity.setCredit(3);
-            moduleEntity.setSemester_no(1);
+            moduleEntity.setSemester_no(2);
             moduleEntity.setModule_code("en0001");
 //            moduleEntity.setId(1);
             moduleEntity.setActive(true);
