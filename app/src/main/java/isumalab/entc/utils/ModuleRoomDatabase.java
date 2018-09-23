@@ -10,11 +10,6 @@ import android.support.annotation.NonNull;
 import isumalab.entc.dao.ModuleDao;
 import isumalab.entc.entity.ModuleEntity;
 
-/**
- * This is the backend. The database. This used to be done by the OpenHelper.
- * The fact that this has very few comments emphasizes its coolness.
- */
-
 @Database(entities = {ModuleEntity.class}, version = 1)
 public abstract class ModuleRoomDatabase extends RoomDatabase {
 
@@ -28,8 +23,6 @@ public abstract class ModuleRoomDatabase extends RoomDatabase {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                             ModuleRoomDatabase.class, "module_database")
-                            // Wipes and rebuilds instead of migrating if no Migration object.
-                            // Migration is not part of this codelab.
                             .fallbackToDestructiveMigration()
                             .addCallback(sRoomDatabaseCallback)
                             .build();
@@ -39,10 +32,6 @@ public abstract class ModuleRoomDatabase extends RoomDatabase {
         return INSTANCE;
     }
 
-    /**
-     * Override the onOpen method to populate the database.
-     * For this sample, we clear the database every time it is created or opened.
-     */
     private static RoomDatabase.Callback sRoomDatabaseCallback = new RoomDatabase.Callback(){
 
         @Override
