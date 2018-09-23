@@ -24,7 +24,7 @@ public class ModuleListAdapter extends RecyclerView.Adapter<ModuleListAdapter.Mo
     private final LayoutInflater mInflater;
     private List<ModuleEntity> mModules; // Cached copy of words
 
-    ModuleListAdapter(Context context) { mInflater = LayoutInflater.from(context); }
+    public ModuleListAdapter(Context context) { mInflater = LayoutInflater.from(context); }
 
     @Override
     public ModuleListAdapter.ModuleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -38,7 +38,7 @@ public class ModuleListAdapter extends RecyclerView.Adapter<ModuleListAdapter.Mo
         holder.moduleItemView.setText(current.getModule_name());
     }
 
-    void setModules(List<ModuleEntity> modules){
+    public void setModules(List<ModuleEntity> modules){
         mModules = modules;
         notifyDataSetChanged();
     }

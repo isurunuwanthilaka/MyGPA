@@ -37,7 +37,7 @@ public class ModuleViewModel extends AndroidViewModel {
         mSemEightModules = mRepository.getSemEightModules();
     }
 
-    LiveData<List<ModuleEntity>> getSemOneModules() { return mSemOneModules; }
+    public LiveData<List<ModuleEntity>> getSemOneModules() { return mSemOneModules; }
     LiveData<List<ModuleEntity>> getSemTwoModules() { return mSemTwoModules; }
     LiveData<List<ModuleEntity>> getSemThreeModules() { return mSemThreeModules; }
     LiveData<List<ModuleEntity>> getSemFourModules() { return mSemFourModules; }
