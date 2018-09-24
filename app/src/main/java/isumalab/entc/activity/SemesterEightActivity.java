@@ -86,10 +86,10 @@ public class SemesterEightActivity extends AppCompatActivity {
 
         if (requestCode == NEW_MODULE_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK) {
             ModuleEntity moduleEntity = new ModuleEntity();
-            moduleEntity.setModule_name(data.getStringExtra(NewModuleActivity.EXTRA_REPLY));
+            moduleEntity.setModule_name(data.getStringExtra(NewModuleActivity.MODULE_NAME));
+            moduleEntity.setModule_code(data.getStringExtra(NewModuleActivity.MODULE_CODE));
             moduleEntity.setCredit(3);
             moduleEntity.setSemester_no(8);
-            moduleEntity.setModule_code("en0001");
 //            moduleEntity.setId(1);
             moduleEntity.setActive(true);
             moduleEntity.setScore(1);
