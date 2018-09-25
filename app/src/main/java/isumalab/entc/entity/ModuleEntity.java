@@ -23,20 +23,20 @@ public class ModuleEntity {
     private boolean gpa;
 
     @NonNull
-    private int credit;
+    private double credit;
 
     @NonNull
     private boolean active;
 
-    private int score;
+    private double score;
 
     @NonNull
-    public int getCredit() {
+    public double getCredit() {
 
         return credit;
     }
 
-    public void setCredit(@NonNull int credit)
+    public void setCredit(@NonNull double credit)
     {
         this.credit = credit;
     }
@@ -51,11 +51,11 @@ public class ModuleEntity {
         this.active = active;
     }
 
-    public int getScore() {
+    public double getScore() {
         return score;
     }
 
-    public void setScore(int score) {
+    public void setScore(double score) {
         this.score = score;
     }
 

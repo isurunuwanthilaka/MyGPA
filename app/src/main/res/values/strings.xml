@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/tools">
     <string name="app_name">ENTC</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -11,4 +11,18 @@
     <string name="hint_word">Word…</string>
     <string name="button_save">Save</string>
     <string name="empty_not_saved">Module not saved because it is empty.</string>
+
+    <string-array name="grade_arrays">
+        <item >A+</item>
+        <item>A</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B</item>
+        <item>B-</item>
+        <item>C+</item>
+        <item>C</item>
+        <item>C-</item>
+        <item>D</item>
+        <item>I-we</item>
+    </string-array>
 </resources>

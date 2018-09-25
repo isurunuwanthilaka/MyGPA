@@ -26,20 +26,10 @@
             android:theme="@style/AppTheme.NoActionBar"
             />
 
-        <activity
-            android:name=".utils.SemesterActivity"
-            android:label="Modules"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
-        <activity
-            android:name=".utils.NewWordActivity"
-            android:label="Edit Module"
-            />
 
         <activity
             android:name=".activity.NewModuleActivity"
