@@ -35,6 +35,4 @@ dependencies {
     annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
     compile 'android.arch.persistence.room:runtime:1.1.1'
     annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
-    compileOnly 'org.projectlombok:lombok:1.18.2'
-    annotationProcessor 'org.projectlombok:lombok:1.18.2'
 }

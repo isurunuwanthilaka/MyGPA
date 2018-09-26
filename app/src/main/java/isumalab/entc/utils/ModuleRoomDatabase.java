@@ -11,11 +11,10 @@ import isumalab.entc.activity.NewModuleActivity;
 import isumalab.entc.dao.ModuleDao;
 import isumalab.entc.entity.ModuleEntity;
 
-@Database(entities = {ModuleEntity.class}, version = 2)
+@Database(entities = {ModuleEntity.class}, version = 1,exportSchema = false)
 public abstract class ModuleRoomDatabase extends RoomDatabase {
 
     public abstract ModuleDao moduleDao();
-
     private static ModuleRoomDatabase INSTANCE;
 
     static ModuleRoomDatabase getDatabase(final Context context) {

@@ -79,7 +79,14 @@
             android:theme="@style/AppTheme.NoActionBar"
             />
 
+        <activity
+            android:name=".activity.EditModuleActivity"
+            android:label="Edit Module"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+
     </application>
+
 
 
 </manifest>
