@@ -38,6 +38,7 @@ public class ModuleListAdapter extends RecyclerView.Adapter<ModuleListAdapter.Mo
         private double mCredits;
         private double mScore;
         private int id;
+        private int semNo;
 
 
         private ModuleViewHolder(View itemView) {
@@ -58,6 +59,10 @@ public class ModuleListAdapter extends RecyclerView.Adapter<ModuleListAdapter.Mo
             id = item;
         }
 
+        public void setSemNo(int item) {
+            semNo = item;
+        }
+
         public void setmCode(String item){
             mCode = item;
         }
@@ -76,10 +81,11 @@ public class ModuleListAdapter extends RecyclerView.Adapter<ModuleListAdapter.Mo
 
         @Override
         public void onClick(View view) {
-            Toast.makeText(view.getContext(),"Module name "+mName, Toast.LENGTH_LONG).show();
+//            Toast.makeText(view.getContext(),"Module name "+mName, Toast.LENGTH_LONG).show();
 
             Bundle bundle = new Bundle();
             Intent intent = new Intent(view.getContext(), EditModuleActivity.class);
+            bundle.putInt("semNo",semNo);
             bundle.putInt("id",id);
             bundle.putString("name",mName);
             bundle.putString("code",mCode);
@@ -88,7 +94,6 @@ public class ModuleListAdapter extends RecyclerView.Adapter<ModuleListAdapter.Mo
             bundle.putFloat("score",Float.parseFloat(String.valueOf(mScore)));
             intent.putExtras(bundle);
             view.getContext().startActivity(intent);
-            System.out.print("Succesfully leave activity");
         }
 
     }
@@ -119,6 +124,7 @@ public class ModuleListAdapter extends RecyclerView.Adapter<ModuleListAdapter.Mo
         holder.setmCredit(current.getCredit());
         holder.setmScore(current.getScore());
         holder.setId(current.getId());
+        holder.setSemNo(current.getSemester_no());
     }
 
     public void setModules(List<ModuleEntity> modules){

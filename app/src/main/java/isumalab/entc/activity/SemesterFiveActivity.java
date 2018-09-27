@@ -26,6 +26,7 @@ import isumalab.entc.utils.ModuleViewModel;
 public class SemesterFiveActivity extends AppCompatActivity {
 
     public static final int NEW_MODULE_ACTIVITY_REQUEST_CODE = 1;
+    public static final int SEMESTER_NO = 5;
 
     private ModuleViewModel mModuleViewModel;
 
@@ -42,16 +43,11 @@ public class SemesterFiveActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // Get a new or existing ViewModel from the ViewModelProvider.
         mModuleViewModel = ViewModelProviders.of(this).get(ModuleViewModel.class);
-
-        // Add an observer on the LiveData returned by getAlphabetizedWords.
-        // The onChanged() method fires when the observed data changes and the activity is
-        // in the foreground.
         mModuleViewModel.getSemFiveModules().observe(this, new Observer<List<ModuleEntity>>() {
             @Override
             public void onChanged(@Nullable final List<ModuleEntity> modules) {
-                // Update the cached copy of the words in the adapter.
+                // Update the cached copy of the List<ModuleEntity> in the adapter.
                 adapter.setModules(modules);
             }
         });
@@ -86,14 +82,13 @@ public class SemesterFiveActivity extends AppCompatActivity {
 
         if (requestCode == NEW_MODULE_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK) {
             ModuleEntity moduleEntity = new ModuleEntity();
-            moduleEntity.setModule_name(data.getStringExtra(NewModuleActivity.EXTRA_REPLY));
-            moduleEntity.setCredit(3);
-            moduleEntity.setSemester_no(5);
-            moduleEntity.setModule_code("en0001");
-//            moduleEntity.setId(1);
+            moduleEntity.setModule_name(data.getStringExtra(NewModuleActivity.MODULE_NAME));
+            moduleEntity.setModule_code(data.getStringExtra(NewModuleActivity.MODULE_CODE));
+            moduleEntity.setGpa(Boolean.parseBoolean(data.getStringExtra(NewModuleActivity.MODULE_GPA)));
+            moduleEntity.setCredit(Double.parseDouble(data.getStringExtra(NewModuleActivity.MODULE_CREDIT)));
+            moduleEntity.setScore(Double.parseDouble(data.getStringExtra(NewModuleActivity.MODULE_SCORE)));
+            moduleEntity.setSemester_no(SEMESTER_NO);
             moduleEntity.setActive(true);
-            moduleEntity.setScore(1);
-            moduleEntity.setGpa(true);
             mModuleViewModel.insert(moduleEntity);
         } else {
             Toast.makeText(
@@ -102,4 +97,5 @@ public class SemesterFiveActivity extends AppCompatActivity {
                     Toast.LENGTH_LONG).show();
         }
     }
+
 }

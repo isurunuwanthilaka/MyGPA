@@ -11,6 +11,8 @@
     <string name="hint_word">Word…</string>
     <string name="button_save">Save</string>
     <string name="empty_not_saved">Module not saved because it is empty.</string>
+    <string name="module_update">Module Updated Successfully.</string>
+    <string name="module_delete">Module Deleted Successfully.</string>
 
     <string-array name="grade_arrays">
         <item >A+</item>

@@ -5,12 +5,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import isumalab.entc.R;
 import isumalab.entc.entity.ModuleEntity;
@@ -43,6 +45,7 @@ public class EditModuleActivity extends AppCompatActivity {
     private double credit;
     private double score;
     private int id;
+    private int semNo;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -68,6 +71,7 @@ public class EditModuleActivity extends AppCompatActivity {
         credit = Double.parseDouble(String.valueOf(extras.getFloat("credit")));
         score = Double.parseDouble(String.valueOf(extras.getFloat("score")));
         id = extras.getInt("id");
+        semNo = extras.getInt("semNo");
 
         EditModuleView_MouduleName.setText(moduleName);
         EditModuleView_MouduleCode.setText(moduleCode);
@@ -86,20 +90,24 @@ public class EditModuleActivity extends AppCompatActivity {
                     radioButton = findViewById(selectedId);
                     String name = EditModuleView_MouduleName.getText().toString();
                     String code = EditModuleView_MouduleCode.getText().toString();
-                    String gpa = (String) radioButton.getText();
+                    String gpa_updated = (String) radioButton.getText();
 
                     ModuleEntity moduleEntity = new ModuleEntity();
                     moduleEntity.setId(id);
                     moduleEntity.setActive(true);
-                    moduleEntity.setCredit(credit);
-                    moduleEntity.setGpa(true);
+                    moduleEntity.setCredit(Double.parseDouble(getGrade(spinner1_result)));
+                    moduleEntity.setGpa(getStrBool(gpa_updated));
                     moduleEntity.setModule_name(name);
                     moduleEntity.setModule_code(code);
-                    moduleEntity.setSemester_no(8);
-                    moduleEntity.setScore(4.2);
+                    moduleEntity.setSemester_no(semNo);
+                    moduleEntity.setScore(Double.parseDouble(getGrade(spinner2_result)));
 
                     try{
                        mModuleViewModel.insert(moduleEntity);
+                        Toast.makeText(
+                                getApplicationContext(),
+                                R.string.module_update,
+                                Toast.LENGTH_LONG).show();
                     }catch (Exception e){
                         e.printStackTrace();
                     }
@@ -114,25 +122,27 @@ public class EditModuleActivity extends AppCompatActivity {
                 int selectedId = radioGroup.getCheckedRadioButtonId();
                 String spinner1_result = spinner1.getSelectedItem().toString();
                 String spinner2_result = spinner2.getSelectedItem().toString();
-                if (TextUtils.isEmpty(EditModuleView_MouduleName.getText()) || TextUtils.isEmpty(EditModuleView_MouduleCode.getText()) || (selectedId == -1) || spinner1_result.isEmpty() || spinner2_result.isEmpty()) {
+                if (TextUtils.isEmpty(EditModuleView_MouduleName.getText()) || TextUtils.isEmpty(EditModuleView_MouduleCode.getText())) {
                 } else {
-                    radioButton = findViewById(selectedId);
                     String name = EditModuleView_MouduleName.getText().toString();
                     String code = EditModuleView_MouduleCode.getText().toString();
-                    String gpa = (String) radioButton.getText();
 
                     ModuleEntity moduleEntity = new ModuleEntity();
                     moduleEntity.setId(id);
                     moduleEntity.setActive(true);
                     moduleEntity.setCredit(credit);
-                    moduleEntity.setGpa(true);
+                    moduleEntity.setGpa(gpa);
                     moduleEntity.setModule_name(name);
                     moduleEntity.setModule_code(code);
-                    moduleEntity.setSemester_no(8);
-                    moduleEntity.setScore(4.2);
+                    moduleEntity.setSemester_no(semNo);
+                    moduleEntity.setScore(score);
 
                     try{
                         mModuleViewModel.delete(moduleEntity);
+                        Toast.makeText(
+                                getApplicationContext(),
+                                R.string.module_delete,
+                                Toast.LENGTH_LONG).show();
                     }catch (Exception e){
                         e.printStackTrace();
                     }
@@ -142,13 +152,13 @@ public class EditModuleActivity extends AppCompatActivity {
         });
     }
 
-    public String getStrBool(String s) {
+    public boolean getStrBool(String s) {
         if (s.equals("Yes")) {
-            return "true";
+            return true;
         } else if (s.equals("No")) {
-            return "false";
+            return false;
         }
-        return "false";
+        return false;
     }
 
     public String getGrade(String s) {
@@ -168,5 +178,7 @@ public class EditModuleActivity extends AppCompatActivity {
         }
         return 3;
     }
+
+
 }
 

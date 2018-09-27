@@ -26,7 +26,7 @@ import isumalab.entc.utils.ModuleViewModel;
 public class SemesterEightActivity extends AppCompatActivity {
 
     public static final int NEW_MODULE_ACTIVITY_REQUEST_CODE = 1;
-    public static final int EDIT_MODULE_ACTIVITY_REQUEST_CODE = 2;
+    public static final int SEMESTER_NO = 8;
 
     private ModuleViewModel mModuleViewModel;
 
@@ -87,7 +87,7 @@ public class SemesterEightActivity extends AppCompatActivity {
             moduleEntity.setGpa(Boolean.parseBoolean(data.getStringExtra(NewModuleActivity.MODULE_GPA)));
             moduleEntity.setCredit(Double.parseDouble(data.getStringExtra(NewModuleActivity.MODULE_CREDIT)));
             moduleEntity.setScore(Double.parseDouble(data.getStringExtra(NewModuleActivity.MODULE_SCORE)));
-            moduleEntity.setSemester_no(8);
+            moduleEntity.setSemester_no(SEMESTER_NO);
             moduleEntity.setActive(true);
             mModuleViewModel.insert(moduleEntity);
         } else {
