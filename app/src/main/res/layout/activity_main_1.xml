@@ -45,22 +45,46 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/textViewActiveCourse"
+            <RelativeLayout
+                android:id="@+id/relative10"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:background="@android:color/darker_gray"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:text="Semesters"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:typeface="normal"
-                app:fontFamily="sans-serif" />
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent">
 
+                <TextView
+                    android:id="@+id/textViewActiveCourse"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="8dp"
+                    android:paddingTop="6dp"
+                    android:text="Overall GPA"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:typeface="normal"
+                    app:fontFamily="sans-serif" />
+
+                <TextView
+                    android:id="@+id/tw_overall_gpa"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="left"
+                    android:paddingLeft="20dp"
+                    android:text="4.18"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:typeface="normal"
+                    app:fontFamily="sans-serif" />
+
+            </RelativeLayout>>
             <android.support.v7.widget.CardView
                 android:id="@+id/sem1"
                 android:layout_width="match_parent"
