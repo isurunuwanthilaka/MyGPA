@@ -26,6 +26,7 @@ import isumalab.entc.utils.ModuleViewModel;
 public class SemesterEightActivity extends AppCompatActivity {
 
     public static final int NEW_MODULE_ACTIVITY_REQUEST_CODE = 1;
+    public static final int EDIT_MODULE_ACTIVITY_REQUEST_CODE = 2;
 
     private ModuleViewModel mModuleViewModel;
 

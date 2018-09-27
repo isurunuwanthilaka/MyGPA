@@ -47,4 +47,5 @@ public class ModuleViewModel extends AndroidViewModel {
     public LiveData<List<ModuleEntity>> getSemEightModules() { return mSemEightModules; }
 
     public void insert(ModuleEntity moduleEntity) { mRepository.insert(moduleEntity); }
+    public void update(ModuleEntity moduleEntity) { mRepository.update(moduleEntity); }
 }

@@ -9,7 +9,8 @@ import java.util.List;
 import isumalab.entc.dao.ModuleDao;
 import isumalab.entc.entity.ModuleEntity;
 
-public class ModuleRepository {private ModuleDao mModuleDao;
+public class ModuleRepository {
+    private ModuleDao mModuleDao;
     private LiveData<List<ModuleEntity>> mSemOneModules;
     private LiveData<List<ModuleEntity>> mSemEightModules;
     private LiveData<List<ModuleEntity>> mSemTwoModules;
@@ -19,7 +20,9 @@ public class ModuleRepository {private ModuleDao mModuleDao;
     private LiveData<List<ModuleEntity>> mSemSixModules;
     private LiveData<List<ModuleEntity>> mSemSevenModules;
 
-    ModuleRepository(Application application) {
+    public ModuleRepository(){}
+
+    public ModuleRepository(Application application) {
         ModuleRoomDatabase db = ModuleRoomDatabase.getDatabase(application);
         mModuleDao = db.moduleDao();
         mSemOneModules = mModuleDao.getSemOneModules();
@@ -61,6 +64,12 @@ public class ModuleRepository {private ModuleDao mModuleDao;
         new ModuleRepository.insertAsyncTask(mModuleDao).execute(moduleEntity);
     }
 
+    public void update (ModuleEntity moduleEntity) {
+        new ModuleRepository.updateAsyncTask(mModuleDao).execute(moduleEntity);
+    }
+
+
+
     private static class insertAsyncTask extends AsyncTask<ModuleEntity, Void, Void> {
 
         private ModuleDao mAsyncTaskDao;
@@ -72,6 +81,21 @@ public class ModuleRepository {private ModuleDao mModuleDao;
         @Override
         protected Void doInBackground(final ModuleEntity... params) {
             mAsyncTaskDao.insertModuleEntity(params[0]);
+            return null;
+        }
+    }
+
+    private static class updateAsyncTask extends AsyncTask<ModuleEntity, Void, Void> {
+
+        private ModuleDao mAsyncTaskDao;
+
+        updateAsyncTask(ModuleDao dao) {
+            mAsyncTaskDao = dao;
+        }
+
+        @Override
+        protected Void doInBackground(final ModuleEntity... params) {
+            mAsyncTaskDao.updateModuleEntity(params[0]);
             return null;
         }
     }
