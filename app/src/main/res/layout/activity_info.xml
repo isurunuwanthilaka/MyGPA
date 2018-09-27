@@ -29,7 +29,7 @@
             android:layout_marginTop="60dp"
             android:autoText="false"
             android:lineSpacingExtra="8sp"
-            android:text="Version - 0.0.1 beta\nShare your thoughts with us twitter/@isumalab\nCodebase - https://github.com/isurunuwanthilaka/ENTC-GPA-Wallet.git"
+            android:text="Version - 0.0.1 beta\nShare your thoughts with us twitter/@inuwanthilaka\nCodebase - https://github.com/isurunuwanthilaka/ENTC-GPA-Wallet.git"
             android:textColor="@android:color/black"
             android:visibility="visible"
             app:fontFamily="serif"

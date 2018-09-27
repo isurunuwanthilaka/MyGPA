@@ -68,6 +68,10 @@ public class ModuleRepository {
         new ModuleRepository.updateAsyncTask(mModuleDao).execute(moduleEntity);
     }
 
+    public void delete (ModuleEntity moduleEntity) {
+        new ModuleRepository.deleteAsyncTask(mModuleDao).execute(moduleEntity);
+    }
+
 
 
     private static class insertAsyncTask extends AsyncTask<ModuleEntity, Void, Void> {
@@ -96,6 +100,21 @@ public class ModuleRepository {
         @Override
         protected Void doInBackground(final ModuleEntity... params) {
             mAsyncTaskDao.updateModuleEntity(params[0]);
+            return null;
+        }
+    }
+
+    private static class deleteAsyncTask extends AsyncTask<ModuleEntity, Void, Void> {
+
+        private ModuleDao mAsyncTaskDao;
+
+        deleteAsyncTask(ModuleDao dao) {
+            mAsyncTaskDao = dao;
+        }
+
+        @Override
+        protected Void doInBackground(final ModuleEntity... params) {
+            mAsyncTaskDao.deleteModuleEntity(params[0]);
             return null;
         }
     }

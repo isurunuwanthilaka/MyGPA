@@ -2,6 +2,7 @@ package isumalab.entc.dao;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
+import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
@@ -52,5 +53,8 @@ public interface ModuleDao {
 
     @Update(onConflict = REPLACE)
     void updateModuleEntity(ModuleEntity moduleEntity);
+
+    @Delete
+    void deleteModuleEntity(ModuleEntity moduleEntity);
 
 }

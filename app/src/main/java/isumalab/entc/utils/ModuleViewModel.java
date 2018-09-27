@@ -48,4 +48,5 @@ public class ModuleViewModel extends AndroidViewModel {
 
     public void insert(ModuleEntity moduleEntity) { mRepository.insert(moduleEntity); }
     public void update(ModuleEntity moduleEntity) { mRepository.update(moduleEntity); }
+    public void delete(ModuleEntity moduleEntity) { mRepository.delete(moduleEntity); }
 }

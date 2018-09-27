@@ -50,7 +50,7 @@ public class EditModuleActivity extends AppCompatActivity {
 
         mModuleViewModel = ViewModelProviders.of(this).get(ModuleViewModel.class);
 
-        setContentView(R.layout.activity_new_module);
+        setContentView(R.layout.activity_edit_module);
         EditModuleView_MouduleName = findViewById(R.id.edit_module_name);
         EditModuleView_MouduleCode = findViewById(R.id.edit_module_code);
         radioGroup = findViewById(R.id.radioGroup);
@@ -75,26 +75,19 @@ public class EditModuleActivity extends AppCompatActivity {
         spinner1.setSelection(getGradePosition(credit));
         spinner2.setSelection(getGradePosition(score));
 
-        final Button button = findViewById(R.id.button_save);
+        final Button button = findViewById(R.id.button_edit_save);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-//                Intent replyIntent = new Intent();
                 int selectedId = radioGroup.getCheckedRadioButtonId();
                 String spinner1_result = spinner1.getSelectedItem().toString();
                 String spinner2_result = spinner2.getSelectedItem().toString();
                 if (TextUtils.isEmpty(EditModuleView_MouduleName.getText()) || TextUtils.isEmpty(EditModuleView_MouduleCode.getText()) || (selectedId == -1) || spinner1_result.isEmpty() || spinner2_result.isEmpty()) {
-//                    setResult(RESULT_CANCELED, replyIntent);
                 } else {
                     radioButton = findViewById(selectedId);
                     String name = EditModuleView_MouduleName.getText().toString();
                     String code = EditModuleView_MouduleCode.getText().toString();
                     String gpa = (String) radioButton.getText();
-//                    replyIntent.putExtra(MODULE_NAME, name);
-//                    replyIntent.putExtra(MODULE_CODE, code);
-//                    replyIntent.putExtra(MODULE_GPA, getStrBool(gpa));
-//                    replyIntent.putExtra(MODULE_CREDIT, getGrade(spinner1_result));
-//                    replyIntent.putExtra(MODULE_SCORE, getGrade(spinner2_result));
-//                    setResult(RESULT_OK, replyIntent);
+
                     ModuleEntity moduleEntity = new ModuleEntity();
                     moduleEntity.setId(id);
                     moduleEntity.setActive(true);
@@ -103,7 +96,7 @@ public class EditModuleActivity extends AppCompatActivity {
                     moduleEntity.setModule_name(name);
                     moduleEntity.setModule_code(code);
                     moduleEntity.setSemester_no(8);
-                    moduleEntity.setScore(5.6);
+                    moduleEntity.setScore(4.2);
 
                     try{
                        mModuleViewModel.insert(moduleEntity);
@@ -112,7 +105,39 @@ public class EditModuleActivity extends AppCompatActivity {
                     }
 
                 }
-//                finish();
+            }
+        });
+
+        final Button button_del = findViewById(R.id.button_del);
+        button_del.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                int selectedId = radioGroup.getCheckedRadioButtonId();
+                String spinner1_result = spinner1.getSelectedItem().toString();
+                String spinner2_result = spinner2.getSelectedItem().toString();
+                if (TextUtils.isEmpty(EditModuleView_MouduleName.getText()) || TextUtils.isEmpty(EditModuleView_MouduleCode.getText()) || (selectedId == -1) || spinner1_result.isEmpty() || spinner2_result.isEmpty()) {
+                } else {
+                    radioButton = findViewById(selectedId);
+                    String name = EditModuleView_MouduleName.getText().toString();
+                    String code = EditModuleView_MouduleCode.getText().toString();
+                    String gpa = (String) radioButton.getText();
+
+                    ModuleEntity moduleEntity = new ModuleEntity();
+                    moduleEntity.setId(id);
+                    moduleEntity.setActive(true);
+                    moduleEntity.setCredit(credit);
+                    moduleEntity.setGpa(true);
+                    moduleEntity.setModule_name(name);
+                    moduleEntity.setModule_code(code);
+                    moduleEntity.setSemester_no(8);
+                    moduleEntity.setScore(4.2);
+
+                    try{
+                        mModuleViewModel.delete(moduleEntity);
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+
+                }
             }
         });
     }
