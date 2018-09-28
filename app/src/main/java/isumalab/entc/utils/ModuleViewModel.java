@@ -11,10 +11,7 @@ import isumalab.entc.entity.ModuleEntity;
 public class ModuleViewModel extends AndroidViewModel {
 
     private ModuleRepository mRepository;
-    // Using LiveData and caching what getAlphabetizedWords returns has several benefits:
-    // - We can put an observer on the data (instead of polling for changes) and only update the
-    //   the UI when the data actually changes.
-    // - Repository is completely separated from the UI through the ViewModel.
+
     private LiveData<List<ModuleEntity>> mSemOneModules;
     private LiveData<List<ModuleEntity>> mSemTwoModules;
     private LiveData<List<ModuleEntity>> mSemThreeModules;
@@ -23,6 +20,7 @@ public class ModuleViewModel extends AndroidViewModel {
     private LiveData<List<ModuleEntity>> mSemSixModules;
     private LiveData<List<ModuleEntity>> mSemSevenModules;
     private LiveData<List<ModuleEntity>> mSemEightModules;
+    private LiveData<List<ModuleEntity>> mAllModules;
 
     public ModuleViewModel (Application application) {
         super(application);
@@ -35,6 +33,7 @@ public class ModuleViewModel extends AndroidViewModel {
         mSemSixModules = mRepository.getSemSixModules();
         mSemSevenModules = mRepository.getSemSevenModules();
         mSemEightModules = mRepository.getSemEightModules();
+        mAllModules = mRepository.getAllModules();
     }
 
     public LiveData<List<ModuleEntity>> getSemOneModules() { return mSemOneModules; }
@@ -45,6 +44,9 @@ public class ModuleViewModel extends AndroidViewModel {
     public LiveData<List<ModuleEntity>> getSemSixModules() { return mSemSixModules; }
     public LiveData<List<ModuleEntity>> getSemSevenModules() { return mSemSevenModules; }
     public LiveData<List<ModuleEntity>> getSemEightModules() { return mSemEightModules; }
+    public LiveData<List<ModuleEntity>> getAllModules() { return mAllModules; }
+
+
 
     public void insert(ModuleEntity moduleEntity) { mRepository.insert(moduleEntity); }
     public void update(ModuleEntity moduleEntity) { mRepository.update(moduleEntity); }

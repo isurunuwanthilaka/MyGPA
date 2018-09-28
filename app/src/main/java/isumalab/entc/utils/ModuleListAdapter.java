@@ -31,7 +31,6 @@ public class ModuleListAdapter extends RecyclerView.Adapter<ModuleListAdapter.Mo
         private final TextView moduleCredit;
         private final TextView moduleScore;
 
-        //testing
         private String mName;
         private String mCode;
         private boolean mGpa;

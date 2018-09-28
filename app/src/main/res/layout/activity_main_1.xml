@@ -72,13 +72,13 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginRight="32dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginRight="23dp"
+                    android:layout_marginBottom="0dp"
                     android:gravity="left"
                     android:paddingLeft="20dp"
                     android:text="4.18"
-                    android:textColor="@android:color/holo_red_dark"
+                    android:textColor="@color/colorBlack"
                     android:textSize="36sp"
                     android:textStyle="bold"
                     android:typeface="normal"
@@ -122,6 +122,20 @@
                         android:textSize="18sp"
                         android:visibility="visible"
                         app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/tw_sem1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="100dp"
+                        android:layout_marginRight="100dp"
+                        android:gravity="center"
+                        android:text="0.00"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
 
                     <ImageView
                         android:id="@+id/edit_sem1"
@@ -178,6 +192,20 @@
                         android:visibility="visible"
                         app:fontFamily="sans-serif" />
 
+                    <TextView
+                        android:id="@+id/tw_sem2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="100dp"
+                        android:layout_marginRight="100dp"
+                        android:gravity="center"
+                        android:text="0.00"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
                     <ImageView
                         android:id="@+id/edit_sem2"
                         android:layout_width="33dp"
@@ -231,6 +259,20 @@
                         android:textSize="18sp"
                         android:visibility="visible"
                         app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/tw_sem3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="100dp"
+                        android:layout_marginRight="100dp"
+                        android:gravity="center"
+                        android:text="0.00"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
 
                     <ImageView
                         android:id="@+id/edit_sem3"
@@ -286,6 +328,20 @@
                         android:visibility="visible"
                         app:fontFamily="sans-serif" />
 
+                    <TextView
+                        android:id="@+id/tw_sem4"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="100dp"
+                        android:layout_marginRight="100dp"
+                        android:gravity="center"
+                        android:text="0.00"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
                     <ImageView
                         android:id="@+id/edit_sem4"
                         android:layout_width="33dp"
@@ -339,6 +395,20 @@
                         android:textSize="18sp"
                         android:visibility="visible"
                         app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/tw_sem5"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="100dp"
+                        android:layout_marginRight="100dp"
+                        android:gravity="center"
+                        android:text="0.00"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
 
                     <ImageView
                         android:id="@+id/edit_sem5"
@@ -394,6 +464,20 @@
                         android:visibility="visible"
                         app:fontFamily="sans-serif" />
 
+                    <TextView
+                        android:id="@+id/tw_sem6"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="100dp"
+                        android:layout_marginRight="100dp"
+                        android:gravity="center"
+                        android:text="0.00"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
                     <ImageView
                         android:id="@+id/edit_sem6"
                         android:layout_width="33dp"
@@ -448,6 +532,20 @@
                         android:visibility="visible"
                         app:fontFamily="sans-serif" />
 
+                    <TextView
+                        android:id="@+id/tw_sem7"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="100dp"
+                        android:layout_marginRight="100dp"
+                        android:gravity="center"
+                        android:text="0.00"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
                     <ImageView
                         android:id="@+id/edit_sem7"
                         android:layout_width="33dp"
@@ -488,12 +586,11 @@
                         android:id="@+id/textViewSem8"
                         android:layout_width="98dp"
                         android:layout_height="match_parent"
-                        android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
                         android:layout_margin="8dp"
-                        android:layout_marginLeft="0dp"
                         android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
                         android:background="@android:color/darker_gray"
                         android:paddingLeft="4dp"
                         android:paddingTop="4dp"
@@ -501,6 +598,20 @@
                         android:textSize="18sp"
                         android:visibility="visible"
                         app:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/tw_sem8"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="100dp"
+                        android:layout_marginRight="100dp"
+                        android:gravity="center"
+                        android:text="0.00"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
 
                     <ImageView
                         android:id="@+id/edit_sem8"

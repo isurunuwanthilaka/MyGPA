@@ -1,18 +1,31 @@
 package isumalab.entc.activity;
 
+import android.arch.lifecycle.Observer;
+import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.View;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.util.List;
 
 import isumalab.entc.R;
+import isumalab.entc.entity.ModuleEntity;
+import isumalab.entc.utils.ModuleViewModel;
+
 public class MainActivity extends AppCompatActivity{
 
     private Toolbar toolbar;
+    private TextView textViewOverAllGpa;
+
+    private ModuleViewModel mModuleViewModel;
+    private List<ModuleEntity> mModules;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +34,19 @@ public class MainActivity extends AppCompatActivity{
 
         toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(toolbar);
+
+        mModuleViewModel = ViewModelProviders.of(this).get(ModuleViewModel.class);
+//        mModules = (List<ModuleEntity>) mModuleViewModel.getAllModules();
+        mModuleViewModel.getAllModules().observe(this, new Observer<List<ModuleEntity>>() {
+            @Override
+            public void onChanged(@Nullable final List<ModuleEntity> modules) {
+                // Update the cached copy of the List<ModuleEntity> in the adapter.
+                mModules = modules;
+            }
+        });
+
+        textViewOverAllGpa=(TextView) findViewById(R.id.tw_overall_gpa);
+        textViewOverAllGpa.setText(String.valueOf(getItemCount()));
 
         ImageView imageView1 = (ImageView) findViewById(R.id.edit_sem1);
         imageView1.setClickable(true);
@@ -125,5 +151,11 @@ public class MainActivity extends AppCompatActivity{
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public int getItemCount() {
+        if (mModules != null)
+            return mModules.size();
+        else return 0;
     }
 }

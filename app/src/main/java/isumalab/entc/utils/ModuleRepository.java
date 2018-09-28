@@ -19,6 +19,7 @@ public class ModuleRepository {
     private LiveData<List<ModuleEntity>> mSemFiveModules;
     private LiveData<List<ModuleEntity>> mSemSixModules;
     private LiveData<List<ModuleEntity>> mSemSevenModules;
+    private LiveData<List<ModuleEntity>> mAllModules;
 
     public ModuleRepository(){}
 
@@ -33,6 +34,7 @@ public class ModuleRepository {
         mSemSixModules = mModuleDao.getSemSixModules();
         mSemSevenModules = mModuleDao.getSemSevenModules();
         mSemEightModules = mModuleDao.getSemEightModules();
+        mAllModules = mModuleDao.getAllModules();
     }
 
     LiveData<List<ModuleEntity>> getSemOneModules() {
@@ -58,6 +60,9 @@ public class ModuleRepository {
     }
     LiveData<List<ModuleEntity>> getSemEightModules() {
         return mSemEightModules;
+    }
+    LiveData<List<ModuleEntity>> getAllModules() {
+        return mAllModules;
     }
 
     public void insert (ModuleEntity moduleEntity) {
