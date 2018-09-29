@@ -23,6 +23,7 @@ public class ModuleRepository {
     private LiveData<List<ModuleEntity>> mSemSixModules;
     private LiveData<List<ModuleEntity>> mSemSevenModules;
     private LiveData<List<ModuleEntity>> mAllModules;
+
     private LiveData<Double> mOverallGpaEntity;
     private LiveData<Double> mGpaSem1;
     private LiveData<Double> mGpaSem2;
@@ -92,6 +93,8 @@ public class ModuleRepository {
     LiveData<Double> getGpaSem6(){return mGpaSem6;}
     LiveData<Double> getGpaSem7(){return mGpaSem7;}
     LiveData<Double> getGpaSem8(){return mGpaSem8;}
+
+    public List<ModuleEntity> getAllModuleEntity(){ return mModuleDao.getAllModuleEntity();}
 
     public void insert (GpaEntity gpaEntity) {
         new ModuleRepository.insertAsyncTaskGpa(mGpaDao).execute(gpaEntity);
