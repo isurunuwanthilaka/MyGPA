@@ -6,6 +6,7 @@ import android.arch.lifecycle.LiveData;
 
 import java.util.List;
 
+import isumalab.entc.entity.GpaEntity;
 import isumalab.entc.entity.ModuleEntity;
 
 public class ModuleViewModel extends AndroidViewModel {
@@ -21,6 +22,7 @@ public class ModuleViewModel extends AndroidViewModel {
     private LiveData<List<ModuleEntity>> mSemSevenModules;
     private LiveData<List<ModuleEntity>> mSemEightModules;
     private LiveData<List<ModuleEntity>> mAllModules;
+    private LiveData<Double> mOverallGpa;
 
     public ModuleViewModel (Application application) {
         super(application);
@@ -34,6 +36,7 @@ public class ModuleViewModel extends AndroidViewModel {
         mSemSevenModules = mRepository.getSemSevenModules();
         mSemEightModules = mRepository.getSemEightModules();
         mAllModules = mRepository.getAllModules();
+        mOverallGpa = mRepository.getOverallGpaEntity();
     }
 
     public LiveData<List<ModuleEntity>> getSemOneModules() { return mSemOneModules; }
@@ -45,10 +48,15 @@ public class ModuleViewModel extends AndroidViewModel {
     public LiveData<List<ModuleEntity>> getSemSevenModules() { return mSemSevenModules; }
     public LiveData<List<ModuleEntity>> getSemEightModules() { return mSemEightModules; }
     public LiveData<List<ModuleEntity>> getAllModules() { return mAllModules; }
+    public LiveData<Double> getOverallGpa() { return mOverallGpa; }
 
 
 
     public void insert(ModuleEntity moduleEntity) { mRepository.insert(moduleEntity); }
     public void update(ModuleEntity moduleEntity) { mRepository.update(moduleEntity); }
     public void delete(ModuleEntity moduleEntity) { mRepository.delete(moduleEntity); }
+
+    public void insert(GpaEntity gpaEntity) { mRepository.insert(gpaEntity); }
+    public void update(GpaEntity gpaEntity) { mRepository.update(gpaEntity); }
+    public void delete(GpaEntity gpaEntity) { mRepository.delete(gpaEntity); }
 }

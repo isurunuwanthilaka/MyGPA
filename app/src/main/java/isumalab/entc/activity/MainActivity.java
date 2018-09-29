@@ -16,6 +16,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import isumalab.entc.R;
+import isumalab.entc.entity.GpaEntity;
 import isumalab.entc.entity.ModuleEntity;
 import isumalab.entc.utils.ModuleViewModel;
 
@@ -31,22 +32,21 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_1);
+        textViewOverAllGpa=findViewById(R.id.tw_overall_gpa);
+        ModuleViewModel moduleViewModel = new ModuleViewModel(getApplication());
+        textViewOverAllGpa.setText(String.valueOf(moduleViewModel.getOverallGpa()));
 
         toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(toolbar);
 
         mModuleViewModel = ViewModelProviders.of(this).get(ModuleViewModel.class);
-//        mModules = (List<ModuleEntity>) mModuleViewModel.getAllModules();
-        mModuleViewModel.getAllModules().observe(this, new Observer<List<ModuleEntity>>() {
+
+        mModuleViewModel.getOverallGpa().observe(this,new Observer<Double>() {
             @Override
-            public void onChanged(@Nullable final List<ModuleEntity> modules) {
-                // Update the cached copy of the List<ModuleEntity> in the adapter.
-                mModules = modules;
+            public void onChanged(@Nullable final Double gpa) {
+                textViewOverAllGpa.setText(String.valueOf(gpa));
             }
         });
-
-        textViewOverAllGpa=(TextView) findViewById(R.id.tw_overall_gpa);
-        textViewOverAllGpa.setText(String.valueOf(getItemCount()));
 
         ImageView imageView1 = (ImageView) findViewById(R.id.edit_sem1);
         imageView1.setClickable(true);
@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity{
                 startActivity(i);
             }
         });
+
         ImageView imageView2 = (ImageView) findViewById(R.id.edit_sem2);
         imageView2.setClickable(true);
         imageView2.setOnClickListener(new View.OnClickListener() {
@@ -154,8 +155,9 @@ public class MainActivity extends AppCompatActivity{
     }
 
     public int getItemCount() {
-        if (mModules != null)
+        if (mModules != null) {
+            System.out.println(mModules.size());
             return mModules.size();
-        else return 0;
+        }else return 0;
     }
 }

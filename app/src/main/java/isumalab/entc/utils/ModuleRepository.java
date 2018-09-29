@@ -6,11 +6,14 @@ import android.os.AsyncTask;
 
 import java.util.List;
 
+import isumalab.entc.dao.GpaDao;
 import isumalab.entc.dao.ModuleDao;
+import isumalab.entc.entity.GpaEntity;
 import isumalab.entc.entity.ModuleEntity;
 
 public class ModuleRepository {
     private ModuleDao mModuleDao;
+    private GpaDao mGpaDao;
     private LiveData<List<ModuleEntity>> mSemOneModules;
     private LiveData<List<ModuleEntity>> mSemEightModules;
     private LiveData<List<ModuleEntity>> mSemTwoModules;
@@ -20,12 +23,14 @@ public class ModuleRepository {
     private LiveData<List<ModuleEntity>> mSemSixModules;
     private LiveData<List<ModuleEntity>> mSemSevenModules;
     private LiveData<List<ModuleEntity>> mAllModules;
+    private LiveData<Double> mOverallGpaEntity;
 
     public ModuleRepository(){}
 
     public ModuleRepository(Application application) {
         ModuleRoomDatabase db = ModuleRoomDatabase.getDatabase(application);
         mModuleDao = db.moduleDao();
+        mGpaDao = db.gpaDao();
         mSemOneModules = mModuleDao.getSemOneModules();
         mSemTwoModules = mModuleDao.getSemTwoModules();
         mSemThreeModules = mModuleDao.getSemThreeModules();
@@ -35,6 +40,7 @@ public class ModuleRepository {
         mSemSevenModules = mModuleDao.getSemSevenModules();
         mSemEightModules = mModuleDao.getSemEightModules();
         mAllModules = mModuleDao.getAllModules();
+        mOverallGpaEntity = mGpaDao.getGpaEntity(9);//9 for overall gpa
     }
 
     LiveData<List<ModuleEntity>> getSemOneModules() {
@@ -58,11 +64,29 @@ public class ModuleRepository {
     LiveData<List<ModuleEntity>> getSemSevenModules() {
         return mSemSevenModules;
     }
+
     LiveData<List<ModuleEntity>> getSemEightModules() {
         return mSemEightModules;
     }
+
     LiveData<List<ModuleEntity>> getAllModules() {
         return mAllModules;
+    }
+
+    LiveData<Double> getOverallGpaEntity(){
+        return mOverallGpaEntity;
+    }
+
+    public void insert (GpaEntity gpaEntity) {
+        new ModuleRepository.insertAsyncTaskGpa(mGpaDao).execute(gpaEntity);
+    }
+
+    public void update (GpaEntity gpaEntity) {
+        new ModuleRepository.updateAsyncTaskGpa(mGpaDao).execute(gpaEntity);
+    }
+
+    public void delete (GpaEntity gpaEntity) {
+        new ModuleRepository.deleteAsyncTaskGpa(mGpaDao).execute(gpaEntity);
     }
 
     public void insert (ModuleEntity moduleEntity) {
@@ -120,6 +144,51 @@ public class ModuleRepository {
         @Override
         protected Void doInBackground(final ModuleEntity... params) {
             mAsyncTaskDao.deleteModuleEntity(params[0]);
+            return null;
+        }
+    }
+
+    private static class insertAsyncTaskGpa extends AsyncTask<GpaEntity, Void, Void> {
+
+        private GpaDao mAsyncTaskDao;
+
+        insertAsyncTaskGpa(GpaDao dao) {
+            mAsyncTaskDao = dao;
+        }
+
+        @Override
+        protected Void doInBackground(final GpaEntity... params) {
+            mAsyncTaskDao.insertGpaEntity(params[0]);
+            return null;
+        }
+    }
+
+    private static class updateAsyncTaskGpa extends AsyncTask<GpaEntity, Void, Void> {
+
+        private GpaDao mAsyncTaskDao;
+
+        updateAsyncTaskGpa(GpaDao dao) {
+            mAsyncTaskDao = dao;
+        }
+
+        @Override
+        protected Void doInBackground(final GpaEntity... params) {
+            mAsyncTaskDao.updateGpaEntity(params[0]);
+            return null;
+        }
+    }
+
+    private static class deleteAsyncTaskGpa extends AsyncTask<GpaEntity, Void, Void> {
+
+        private GpaDao mAsyncTaskDao;
+
+        deleteAsyncTaskGpa(GpaDao dao) {
+            mAsyncTaskDao = dao;
+        }
+
+        @Override
+        protected Void doInBackground(final GpaEntity... params) {
+            mAsyncTaskDao.deleteGpaEntity(params[0]);
             return null;
         }
     }

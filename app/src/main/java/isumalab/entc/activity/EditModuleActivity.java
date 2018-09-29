@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,7 +15,6 @@ import android.widget.Toast;
 
 import isumalab.entc.R;
 import isumalab.entc.entity.ModuleEntity;
-import isumalab.entc.utils.ModuleRepository;
 import isumalab.entc.utils.ModuleViewModel;
 
 public class EditModuleActivity extends AppCompatActivity {
@@ -172,11 +170,11 @@ public class EditModuleActivity extends AppCompatActivity {
 
     public int getGradePosition(double grade){
         if (grade==4.2){
-            return 1;
+            return 0;
         }else if(grade==4.0){
-            return 2;
+            return 1;
         }
-        return 3;
+        return 2;
     }
 
 
