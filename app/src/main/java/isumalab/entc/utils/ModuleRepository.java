@@ -24,6 +24,15 @@ public class ModuleRepository {
     private LiveData<List<ModuleEntity>> mSemSevenModules;
     private LiveData<List<ModuleEntity>> mAllModules;
     private LiveData<Double> mOverallGpaEntity;
+    private LiveData<Double> mGpaSem1;
+    private LiveData<Double> mGpaSem2;
+    private LiveData<Double> mGpaSem3;
+    private LiveData<Double> mGpaSem4;
+    private LiveData<Double> mGpaSem5;
+    private LiveData<Double> mGpaSem6;
+    private LiveData<Double> mGpaSem7;
+    private LiveData<Double> mGpaSem8;
+
 
     public ModuleRepository(){}
 
@@ -41,6 +50,14 @@ public class ModuleRepository {
         mSemEightModules = mModuleDao.getSemEightModules();
         mAllModules = mModuleDao.getAllModules();
         mOverallGpaEntity = mGpaDao.getGpaEntity(9);//9 for overall gpa
+        mGpaSem1 = mGpaDao.getGpaEntity(1);
+        mGpaSem2 = mGpaDao.getGpaEntity(2);
+        mGpaSem3 = mGpaDao.getGpaEntity(3);
+        mGpaSem4 = mGpaDao.getGpaEntity(4);
+        mGpaSem5 = mGpaDao.getGpaEntity(5);
+        mGpaSem6 = mGpaDao.getGpaEntity(6);
+        mGpaSem7 = mGpaDao.getGpaEntity(7);
+        mGpaSem8 = mGpaDao.getGpaEntity(8);
     }
 
     LiveData<List<ModuleEntity>> getSemOneModules() {
@@ -64,18 +81,17 @@ public class ModuleRepository {
     LiveData<List<ModuleEntity>> getSemSevenModules() {
         return mSemSevenModules;
     }
-
-    LiveData<List<ModuleEntity>> getSemEightModules() {
-        return mSemEightModules;
-    }
-
-    LiveData<List<ModuleEntity>> getAllModules() {
-        return mAllModules;
-    }
-
-    LiveData<Double> getOverallGpaEntity(){
-        return mOverallGpaEntity;
-    }
+    LiveData<List<ModuleEntity>> getSemEightModules() {return mSemEightModules;}
+    LiveData<List<ModuleEntity>> getAllModules() {return mAllModules;}
+    LiveData<Double> getOverallGpaEntity(){return mOverallGpaEntity;}
+    LiveData<Double> getGpaSem1(){return mGpaSem1;}
+    LiveData<Double> getGpaSem2(){return mGpaSem2;}
+    LiveData<Double> getGpaSem3(){return mGpaSem3;}
+    LiveData<Double> getGpaSem4(){return mGpaSem4;}
+    LiveData<Double> getGpaSem5(){return mGpaSem5;}
+    LiveData<Double> getGpaSem6(){return mGpaSem6;}
+    LiveData<Double> getGpaSem7(){return mGpaSem7;}
+    LiveData<Double> getGpaSem8(){return mGpaSem8;}
 
     public void insert (GpaEntity gpaEntity) {
         new ModuleRepository.insertAsyncTaskGpa(mGpaDao).execute(gpaEntity);

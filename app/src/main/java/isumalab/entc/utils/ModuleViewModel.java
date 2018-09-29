@@ -23,6 +23,14 @@ public class ModuleViewModel extends AndroidViewModel {
     private LiveData<List<ModuleEntity>> mSemEightModules;
     private LiveData<List<ModuleEntity>> mAllModules;
     private LiveData<Double> mOverallGpa;
+    private LiveData<Double> mGpaSem1;
+    private LiveData<Double> mGpaSem2;
+    private LiveData<Double> mGpaSem3;
+    private LiveData<Double> mGpaSem4;
+    private LiveData<Double> mGpaSem5;
+    private LiveData<Double> mGpaSem6;
+    private LiveData<Double> mGpaSem7;
+    private LiveData<Double> mGpaSem8;
 
     public ModuleViewModel (Application application) {
         super(application);
@@ -37,6 +45,14 @@ public class ModuleViewModel extends AndroidViewModel {
         mSemEightModules = mRepository.getSemEightModules();
         mAllModules = mRepository.getAllModules();
         mOverallGpa = mRepository.getOverallGpaEntity();
+        mGpaSem1 = mRepository.getGpaSem1();
+        mGpaSem2 = mRepository.getGpaSem2();
+        mGpaSem3 = mRepository.getGpaSem3();
+        mGpaSem4 = mRepository.getGpaSem4();
+        mGpaSem5 = mRepository.getGpaSem5();
+        mGpaSem6 = mRepository.getGpaSem6();
+        mGpaSem7 = mRepository.getGpaSem7();
+        mGpaSem8 = mRepository.getGpaSem8();
     }
 
     public LiveData<List<ModuleEntity>> getSemOneModules() { return mSemOneModules; }
@@ -49,6 +65,14 @@ public class ModuleViewModel extends AndroidViewModel {
     public LiveData<List<ModuleEntity>> getSemEightModules() { return mSemEightModules; }
     public LiveData<List<ModuleEntity>> getAllModules() { return mAllModules; }
     public LiveData<Double> getOverallGpa() { return mOverallGpa; }
+    public LiveData<Double> getGpaSem1(){return mGpaSem1;}
+    public LiveData<Double> getGpaSem2(){return mGpaSem2;}
+    public LiveData<Double> getGpaSem3(){return mGpaSem3;}
+    public LiveData<Double> getGpaSem4(){return mGpaSem4;}
+    public LiveData<Double> getGpaSem5(){return mGpaSem5;}
+    public LiveData<Double> getGpaSem6(){return mGpaSem6;}
+    public LiveData<Double> getGpaSem7(){return mGpaSem7;}
+    public LiveData<Double> getGpaSem8(){return mGpaSem8;}
 
 
 

@@ -24,6 +24,15 @@ public class MainActivity extends AppCompatActivity{
 
     private Toolbar toolbar;
     private TextView textViewOverAllGpa;
+    private TextView textViewGpaSem1;
+    private TextView textViewGpaSem2;
+    private TextView textViewGpaSem3;
+    private TextView textViewGpaSem4;
+    private TextView textViewGpaSem5;
+    private TextView textViewGpaSem6;
+    private TextView textViewGpaSem7;
+    private TextView textViewGpaSem8;
+
 
     private ModuleViewModel mModuleViewModel;
     private List<ModuleEntity> mModules;
@@ -32,9 +41,27 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_1);
-        textViewOverAllGpa=findViewById(R.id.tw_overall_gpa);
+        textViewOverAllGpa = findViewById(R.id.tw_overall_gpa);
+        textViewGpaSem1 = findViewById(R.id.tw_sem1);
+        textViewGpaSem2 = findViewById(R.id.tw_sem2);
+        textViewGpaSem3 = findViewById(R.id.tw_sem3);
+        textViewGpaSem4 = findViewById(R.id.tw_sem4);
+        textViewGpaSem5 = findViewById(R.id.tw_sem5);
+        textViewGpaSem6 = findViewById(R.id.tw_sem6);
+        textViewGpaSem7 = findViewById(R.id.tw_sem7);
+        textViewGpaSem8 = findViewById(R.id.tw_sem8);
+
         ModuleViewModel moduleViewModel = new ModuleViewModel(getApplication());
         textViewOverAllGpa.setText(String.valueOf(moduleViewModel.getOverallGpa()));
+        textViewGpaSem1.setText(String.valueOf(moduleViewModel.getGpaSem1()));
+        textViewGpaSem2.setText(String.valueOf(moduleViewModel.getGpaSem2()));
+        textViewGpaSem3.setText(String.valueOf(moduleViewModel.getGpaSem3()));
+        textViewGpaSem4.setText(String.valueOf(moduleViewModel.getGpaSem4()));
+        textViewGpaSem5.setText(String.valueOf(moduleViewModel.getGpaSem5()));
+        textViewGpaSem6.setText(String.valueOf(moduleViewModel.getGpaSem6()));
+        textViewGpaSem7.setText(String.valueOf(moduleViewModel.getGpaSem7()));
+        textViewGpaSem8.setText(String.valueOf(moduleViewModel.getGpaSem8()));
+
 
         toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(toolbar);
@@ -45,6 +72,62 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onChanged(@Nullable final Double gpa) {
                 textViewOverAllGpa.setText(String.valueOf(gpa));
+            }
+        });
+
+        mModuleViewModel.getGpaSem1().observe(this,new Observer<Double>() {
+            @Override
+            public void onChanged(@Nullable final Double gpa) {
+                textViewGpaSem1.setText(String.valueOf(gpa));
+            }
+        });
+
+        mModuleViewModel.getGpaSem2().observe(this,new Observer<Double>() {
+            @Override
+            public void onChanged(@Nullable final Double gpa) {
+                textViewGpaSem2.setText(String.valueOf(gpa));
+            }
+        });
+
+        mModuleViewModel.getGpaSem3().observe(this,new Observer<Double>() {
+            @Override
+            public void onChanged(@Nullable final Double gpa) {
+                textViewGpaSem3.setText(String.valueOf(gpa));
+            }
+        });
+
+        mModuleViewModel.getGpaSem4().observe(this,new Observer<Double>() {
+            @Override
+            public void onChanged(@Nullable final Double gpa) {
+                textViewGpaSem4.setText(String.valueOf(gpa));
+            }
+        });
+
+        mModuleViewModel.getGpaSem5().observe(this,new Observer<Double>() {
+            @Override
+            public void onChanged(@Nullable final Double gpa) {
+                textViewGpaSem5.setText(String.valueOf(gpa));
+            }
+        });
+
+        mModuleViewModel.getGpaSem6().observe(this,new Observer<Double>() {
+            @Override
+            public void onChanged(@Nullable final Double gpa) {
+                textViewGpaSem6.setText(String.valueOf(gpa));
+            }
+        });
+
+        mModuleViewModel.getGpaSem7().observe(this,new Observer<Double>() {
+            @Override
+            public void onChanged(@Nullable final Double gpa) {
+                textViewGpaSem7.setText(String.valueOf(gpa));
+            }
+        });
+
+        mModuleViewModel.getGpaSem8().observe(this,new Observer<Double>() {
+            @Override
+            public void onChanged(@Nullable final Double gpa) {
+                textViewGpaSem8.setText(String.valueOf(gpa));
             }
         });
 
