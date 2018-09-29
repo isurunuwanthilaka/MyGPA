@@ -5,11 +5,13 @@ import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.text.TextUtils;
 import android.view.View;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,6 +20,7 @@ import java.util.List;
 import isumalab.entc.R;
 import isumalab.entc.entity.GpaEntity;
 import isumalab.entc.entity.ModuleEntity;
+import isumalab.entc.services.Calculation;
 import isumalab.entc.utils.ModuleViewModel;
 
 public class MainActivity extends AppCompatActivity{
@@ -61,6 +64,14 @@ public class MainActivity extends AppCompatActivity{
         textViewGpaSem6.setText(String.valueOf(moduleViewModel.getGpaSem6()));
         textViewGpaSem7.setText(String.valueOf(moduleViewModel.getGpaSem7()));
         textViewGpaSem8.setText(String.valueOf(moduleViewModel.getGpaSem8()));
+
+        final Button button = findViewById(R.id.button_refresh);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Calculation calculation = new Calculation();
+                calculation.OverAllGpa();
+            }
+        });
 
 
         toolbar = (Toolbar) findViewById(R.id.my_toolbar);
