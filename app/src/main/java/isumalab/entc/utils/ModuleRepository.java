@@ -7,6 +7,7 @@ import android.os.AsyncTask;
 import java.util.List;
 
 import isumalab.entc.dao.GpaDao;
+import isumalab.entc.dao.GpaStaticDao;
 import isumalab.entc.dao.ModuleDao;
 import isumalab.entc.entity.GpaEntity;
 import isumalab.entc.entity.ModuleEntity;
@@ -14,6 +15,7 @@ import isumalab.entc.entity.ModuleEntity;
 public class ModuleRepository {
     private ModuleDao mModuleDao;
     private GpaDao mGpaDao;
+
     private LiveData<List<ModuleEntity>> mSemOneModules;
     private LiveData<List<ModuleEntity>> mSemEightModules;
     private LiveData<List<ModuleEntity>> mSemTwoModules;
@@ -41,6 +43,7 @@ public class ModuleRepository {
         ModuleRoomDatabase db = ModuleRoomDatabase.getDatabase(application);
         mModuleDao = db.moduleDao();
         mGpaDao = db.gpaDao();
+
         mSemOneModules = mModuleDao.getSemOneModules();
         mSemTwoModules = mModuleDao.getSemTwoModules();
         mSemThreeModules = mModuleDao.getSemThreeModules();
@@ -50,6 +53,7 @@ public class ModuleRepository {
         mSemSevenModules = mModuleDao.getSemSevenModules();
         mSemEightModules = mModuleDao.getSemEightModules();
         mAllModules = mModuleDao.getAllModules();
+
         mOverallGpaEntity = mGpaDao.getGpaEntity(9);//9 for overall gpa
         mGpaSem1 = mGpaDao.getGpaEntity(1);
         mGpaSem2 = mGpaDao.getGpaEntity(2);
@@ -59,6 +63,7 @@ public class ModuleRepository {
         mGpaSem6 = mGpaDao.getGpaEntity(6);
         mGpaSem7 = mGpaDao.getGpaEntity(7);
         mGpaSem8 = mGpaDao.getGpaEntity(8);
+
     }
 
     LiveData<List<ModuleEntity>> getSemOneModules() {

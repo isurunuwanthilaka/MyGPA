@@ -9,6 +9,7 @@ import android.support.annotation.NonNull;
 
 import isumalab.entc.activity.NewModuleActivity;
 import isumalab.entc.dao.GpaDao;
+import isumalab.entc.dao.GpaStaticDao;
 import isumalab.entc.dao.ModuleDao;
 import isumalab.entc.entity.GpaEntity;
 import isumalab.entc.entity.ModuleEntity;
@@ -18,9 +19,10 @@ public abstract class ModuleRoomDatabase extends RoomDatabase {
 
     public abstract ModuleDao moduleDao();
     public abstract GpaDao gpaDao();
+    public abstract GpaStaticDao gpaStaticDao();
     private static ModuleRoomDatabase INSTANCE;
 
-    static ModuleRoomDatabase getDatabase(final Context context) {
+    public static ModuleRoomDatabase getDatabase(final Context context) {
         if (INSTANCE == null) {
             synchronized (ModuleRoomDatabase.class) {
                 if (INSTANCE == null) {
@@ -28,6 +30,7 @@ public abstract class ModuleRoomDatabase extends RoomDatabase {
                             ModuleRoomDatabase.class, "app_database")
                             .fallbackToDestructiveMigration()
                             .addCallback(sRoomDatabaseCallback)
+                            .allowMainThreadQueries()
                             .build();
                 }
             }

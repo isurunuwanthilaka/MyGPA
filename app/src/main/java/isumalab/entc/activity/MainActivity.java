@@ -65,11 +65,21 @@ public class MainActivity extends AppCompatActivity{
         textViewGpaSem7.setText(String.valueOf(moduleViewModel.getGpaSem7()));
         textViewGpaSem8.setText(String.valueOf(moduleViewModel.getGpaSem8()));
 
-        final Button button = findViewById(R.id.button_refresh);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
+//        final Button button = findViewById(R.id.button_refresh);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View view) {
+//                Calculation calculation = new Calculation();
+//                calculation.OverAllGpa();
+//            }
+//        });
+
+        ImageView imageViewRefresh = (ImageView) findViewById(R.id.img_refresh);
+        imageViewRefresh.setClickable(true);
+        imageViewRefresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Calculation calculation = new Calculation();
-                calculation.OverAllGpa();
+                calculation.init(getApplication());
             }
         });
 
