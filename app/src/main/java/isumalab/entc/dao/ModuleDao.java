@@ -46,7 +46,7 @@ public interface ModuleDao {
     LiveData<List<ModuleEntity>> getAllModules();
 
     @Query("select * from module_table where gpa=1 ORDER BY id ASC")
-    LiveData<List<ModuleEntity>> getAllM();
+    List<ModuleEntity> getAllModuleEntity();
 
     @Query("select * from module_table where module_code LIKE :moduleCode")
     ModuleEntity getModuleByModuleCode(String moduleCode);
