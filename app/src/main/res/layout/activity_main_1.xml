@@ -25,6 +25,8 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:elevation="4dp"
+            android:background="?attr/colorPrimary"
+            android:actionMenuTextColor="@android:color/white"
             />
 
         <android.support.v7.widget.CardView

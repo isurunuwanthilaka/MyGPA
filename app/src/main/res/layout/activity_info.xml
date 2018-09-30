@@ -12,38 +12,72 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/layout_info"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:scrollbarAlwaysDrawHorizontalTrack="false"
-        android:scrollbarAlwaysDrawVerticalTrack="false"
-        tools:context=".activity.InfoActivity">
+        android:scrollbarAlwaysDrawVerticalTrack="false">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/my_toolbar"
             style="@style/HeaderBar"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:elevation="4dp"
-            />
+            android:elevation="4dp" />
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
             android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
             android:layout_marginTop="60dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
             android:autoText="false"
             android:lineSpacingExtra="8sp"
-            android:text="Version - 0.0.1 beta\nShare your thoughts with us twitter/@inuwanthilaka\nCodebase - https://github.com/isurunuwanthilaka/ENTC-GPA-Wallet.git"
+            android:text="V0.1 2018/Sep Release\nShare your thoughts with us twitter.com/inuwanthilaka\nContribute @ codebase - https://isurunuwanthilaka@bitbucket.org/isurunuwanthilaka/entc-android-app.git"
             android:textColor="@android:color/black"
             android:visibility="visible"
             app:fontFamily="serif"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/news"
+            android:layout_width="348dp"
+            android:layout_height="173dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginRight="18dp"
+            android:padding="8dp"
+            app:fontFamily="serif"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="107dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="31dp"
+            android:layout_marginBottom="12dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="2dp"
+            android:text="Notes:"
+            app:fontFamily="serif"
+            app:layout_constraintBottom_toTopOf="@+id/news"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
     </android.support.constraint.ConstraintLayout>

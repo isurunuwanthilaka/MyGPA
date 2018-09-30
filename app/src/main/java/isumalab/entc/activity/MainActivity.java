@@ -87,6 +87,8 @@ public class MainActivity extends AppCompatActivity{
         toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(toolbar);
 
+
+
         mModuleViewModel = ViewModelProviders.of(this).get(ModuleViewModel.class);
 
         mModuleViewModel.getOverallGpa().observe(this,new Observer<Double>() {

@@ -131,6 +131,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginRight="4dp"
             android:layout_marginBottom="4dp"
+            android:background="@null"
             android:inputType="numberDecimal"
             android:paddingLeft="4dp" />
 
@@ -159,6 +160,7 @@
             android:layout_margin="2dp"
             android:entries="@array/grade_arrays"
             android:textColor="@color/colorBlack"
+            android:textColorPrimary="@color/colorBlack"
             android:backgroundTint="@color/colorBlack"/>
     </LinearLayout>
 
