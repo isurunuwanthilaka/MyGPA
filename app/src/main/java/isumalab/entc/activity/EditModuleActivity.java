@@ -31,11 +31,11 @@ public class EditModuleActivity extends AppCompatActivity {
 
     private EditText EditModuleView_MouduleCode;
     private EditText EditModuleView_MouduleName;
+    private EditText EditModuleView_MouduleCredit;
     private RadioGroup radioGroup;
     private RadioButton radioButton;
     private RadioButton rb1;
     private RadioButton rb2;
-    private Spinner spinner1;
     private Spinner spinner2;
 
     private String moduleName;
@@ -56,10 +56,10 @@ public class EditModuleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_edit_module);
         EditModuleView_MouduleName = findViewById(R.id.edit_module_name);
         EditModuleView_MouduleCode = findViewById(R.id.edit_module_code);
+        EditModuleView_MouduleCredit = findViewById(R.id.et_credit);
         radioGroup = findViewById(R.id.radioGroup);
         rb1 = findViewById(R.id.radioButton1);
         rb2 = findViewById(R.id.radioButton2);
-        spinner1 = findViewById(R.id.spinner1);
         spinner2 = findViewById(R.id.spinner2);
 
         Intent intent = getIntent();
@@ -76,26 +76,27 @@ public class EditModuleActivity extends AppCompatActivity {
         EditModuleView_MouduleName.setText(moduleName);
         EditModuleView_MouduleCode.setText(moduleCode);
         rb1.setSelected(gpa);
-        spinner1.setSelection(getGradePosition(credit));
+        EditModuleView_MouduleCredit.setText(String.valueOf(credit));
         spinner2.setSelection(getGradePosition(score));
 
         final Button button = findViewById(R.id.button_edit_save);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 int selectedId = radioGroup.getCheckedRadioButtonId();
-                String spinner1_result = spinner1.getSelectedItem().toString();
+                String spinner1_result = EditModuleView_MouduleCredit.getText().toString();
                 String spinner2_result = spinner2.getSelectedItem().toString();
-                if (TextUtils.isEmpty(EditModuleView_MouduleName.getText()) || TextUtils.isEmpty(EditModuleView_MouduleCode.getText()) || (selectedId == -1) || spinner1_result.isEmpty() || spinner2_result.isEmpty()) {
+                if (TextUtils.isEmpty(EditModuleView_MouduleName.getText()) || TextUtils.isEmpty(EditModuleView_MouduleCode.getText()) || (selectedId == -1) || TextUtils.isEmpty(EditModuleView_MouduleCredit.getText()) || spinner2_result.isEmpty()) {
                 } else {
                     radioButton = findViewById(selectedId);
                     String name = EditModuleView_MouduleName.getText().toString();
                     String code = EditModuleView_MouduleCode.getText().toString();
+                    String credit = EditModuleView_MouduleCredit.getText().toString();
                     String gpa_updated = (String) radioButton.getText();
 
                     ModuleEntity moduleEntity = new ModuleEntity();
                     moduleEntity.setId(id);
                     moduleEntity.setActive(true);
-                    moduleEntity.setCredit(Double.parseDouble(getGrade(spinner1_result)));
+                    moduleEntity.setCredit(Double.parseDouble(credit));
                     moduleEntity.setGpa(getStrBool(gpa_updated));
                     moduleEntity.setModule_name(name);
                     moduleEntity.setModule_code(code);
@@ -119,9 +120,6 @@ public class EditModuleActivity extends AppCompatActivity {
         final Button button_del = findViewById(R.id.button_del);
         button_del.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                int selectedId = radioGroup.getCheckedRadioButtonId();
-                String spinner1_result = spinner1.getSelectedItem().toString();
-                String spinner2_result = spinner2.getSelectedItem().toString();
                 if (TextUtils.isEmpty(EditModuleView_MouduleName.getText()) || TextUtils.isEmpty(EditModuleView_MouduleCode.getText())) {
                 } else {
                     String name = EditModuleView_MouduleName.getText().toString();

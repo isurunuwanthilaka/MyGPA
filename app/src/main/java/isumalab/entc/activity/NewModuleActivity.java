@@ -25,9 +25,9 @@ public class NewModuleActivity extends AppCompatActivity {
 
   private EditText EditModuleView_MouduleCode;
   private EditText EditModuleView_MouduleName;
+  private EditText EditModuleView_MouduleCredit;
   private RadioGroup radioGroup;
   private RadioButton radioButton;
-  private Spinner spinner1;
   private Spinner spinner2;
 
   @Override
@@ -36,8 +36,8 @@ public class NewModuleActivity extends AppCompatActivity {
     setContentView(R.layout.activity_new_module);
     EditModuleView_MouduleName = findViewById(R.id.edit_module_name);
     EditModuleView_MouduleCode = findViewById(R.id.edit_module_code);
+    EditModuleView_MouduleCredit = findViewById(R.id.et_credit);
     radioGroup = findViewById(R.id.radioGroup);
-    spinner1 = findViewById(R.id.spinner1);
     spinner2 = findViewById(R.id.spinner2);
 
     final Button button = findViewById(R.id.button_save);
@@ -45,9 +45,9 @@ public class NewModuleActivity extends AppCompatActivity {
       public void onClick(View view) {
         Intent replyIntent = new Intent();
         int selectedId = radioGroup.getCheckedRadioButtonId();
-        String spinner1_result = spinner1.getSelectedItem().toString();
+        String spinner1_result = EditModuleView_MouduleCredit.getText().toString();
         String spinner2_result = spinner2.getSelectedItem().toString();
-        if (TextUtils.isEmpty(EditModuleView_MouduleName.getText())||TextUtils.isEmpty(EditModuleView_MouduleCode.getText())||(selectedId==-1)||spinner1_result.isEmpty()||spinner2_result.isEmpty()){
+        if (TextUtils.isEmpty(EditModuleView_MouduleName.getText())||TextUtils.isEmpty(EditModuleView_MouduleCode.getText())||(selectedId==-1)||TextUtils.isEmpty(EditModuleView_MouduleCredit.getText())||spinner2_result.isEmpty()){
           setResult(RESULT_CANCELED, replyIntent);
         } else {
 
@@ -59,7 +59,7 @@ public class NewModuleActivity extends AppCompatActivity {
           replyIntent.putExtra(MODULE_NAME,name);
           replyIntent.putExtra(MODULE_CODE,code);
           replyIntent.putExtra(MODULE_GPA,getStrBool(gpa));
-          replyIntent.putExtra(MODULE_CREDIT,getGrade(spinner1_result));
+          replyIntent.putExtra(MODULE_CREDIT,spinner1_result);
           replyIntent.putExtra(MODULE_SCORE,getGrade(spinner2_result));
           setResult(RESULT_OK, replyIntent);
         }
