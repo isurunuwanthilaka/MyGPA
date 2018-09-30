@@ -39,6 +39,9 @@ public class SemesterEightActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
         final ModuleListAdapter adapter = new ModuleListAdapter(this);
         recyclerView.setAdapter(adapter);
@@ -63,6 +66,7 @@ public class SemesterEightActivity extends AppCompatActivity {
         });
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu_1, menu);
@@ -73,6 +77,15 @@ public class SemesterEightActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_settings) {
+            return true;
+        }
+        if (id == android.R.id.home) {
+            finish();
+        }
+        if (id == R.id.action_info) {
+            Toast.makeText(this, "Minimum Credits : 22.5", Toast.LENGTH_LONG).show();
+//            Intent i = new Intent(this, InfoActivity.class);
+//            this.startActivity(i);
             return true;
         }
         return super.onOptionsItemSelected(item);

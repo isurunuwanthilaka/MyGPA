@@ -80,8 +80,26 @@ public class NewModuleActivity extends AppCompatActivity {
   public String getGrade(String s){
     if (s.equals("A+")) {
       return "4.2";
-    }else if (s.equals("A")){
+    } else if (s.equals("A")) {
       return "4.0";
+    }else if (s.equals("A-")) {
+      return "3.7";
+    }else if (s.equals("B+")) {
+      return "3.3";
+    }else if (s.equals("B")) {
+      return "3.0";
+    }else if (s.equals("B-")) {
+      return "2.7";
+    }else if (s.equals("C+")) {
+      return "2.3";
+    }else if (s.equals("C")) {
+      return "2.0";
+    }else if (s.equals("C-")) {
+      return "1.5";
+    }else if (s.equals("D")) {
+      return "1.0";
+    }else if (s.equals("F")) {
+      return "0.0";
     }
     return "0.0";
   }

@@ -2,8 +2,8 @@
 <resources>
     <color name="colorPrimary">#3f51b5</color>
     <color name="colorBlack">#000000</color>
-    <color name="colorPrimaryDark">#303f9f</color>
-    <color name="semCardColor">#1180FF</color>
-    <color name="colorAccent">#595f5a</color>
+    <color name="colorPrimaryDark">#3f51b5</color>
+    <color name="semCardColor">#3f51b5</color>
+    <color name="colorAccent">#3f51b5</color>
     <color name="buttonLabel">#d3d3d3</color>
 </resources>

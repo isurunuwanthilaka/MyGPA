@@ -4,6 +4,7 @@ import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -48,6 +49,7 @@ public class EditModuleActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
         mModuleViewModel = ViewModelProviders.of(this).get(ModuleViewModel.class);
 
@@ -164,6 +166,24 @@ public class EditModuleActivity extends AppCompatActivity {
             return "4.2";
         } else if (s.equals("A")) {
             return "4.0";
+        }else if (s.equals("A-")) {
+            return "3.7";
+        }else if (s.equals("B+")) {
+            return "3.3";
+        }else if (s.equals("B")) {
+            return "3.0";
+        }else if (s.equals("B-")) {
+            return "2.7";
+        }else if (s.equals("C+")) {
+            return "2.3";
+        }else if (s.equals("C")) {
+            return "2.0";
+        }else if (s.equals("C-")) {
+            return "1.5";
+        }else if (s.equals("D")) {
+            return "1.0";
+        }else if (s.equals("F")) {
+            return "0.0";
         }
         return "0.0";
     }
@@ -173,8 +193,26 @@ public class EditModuleActivity extends AppCompatActivity {
             return 0;
         }else if(grade==4.0){
             return 1;
+        }else if(grade==3.7){
+            return 2;
+        }else if(grade==3.3){
+            return 3;
+        }else if(grade==3.0){
+            return 4;
+        }else if(grade==2.7){
+            return 5;
+        }else if(grade==2.3){
+            return 6;
+        }else if(grade==2.0){
+            return 7;
+        }else if(grade==1.5){
+            return 8;
+        }else if(grade==1.0){
+            return 9;
+        }else if(grade==0){
+            return 10;
         }
-        return 2;
+        return 10;
     }
 
 
