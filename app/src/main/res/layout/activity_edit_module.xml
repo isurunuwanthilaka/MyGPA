@@ -8,6 +8,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/buttonLabel"
         android:orientation="horizontal">
 
         <TextView
@@ -39,6 +44,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/buttonLabel"
         android:orientation="horizontal">
 
         <TextView
@@ -70,6 +79,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/buttonLabel"
         android:orientation="horizontal">
 
         <TextView
@@ -110,6 +123,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/buttonLabel"
         android:orientation="horizontal">
 
         <TextView
@@ -117,7 +134,7 @@
             android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
-            android:layout_marginTop="-6dp"
+            android:layout_marginTop="-2dp"
             android:layout_marginRight="4dp"
             android:layout_marginBottom="12dp"
             android:paddingLeft="8dp"
@@ -129,6 +146,7 @@
             android:id="@+id/et_credit"
             android:layout_width="100dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
             android:layout_marginTop="4dp"
             android:layout_marginRight="4dp"
             android:layout_marginBottom="4dp"
@@ -141,6 +159,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/buttonLabel"
         android:orientation="horizontal"
         android:textColor="@color/colorBlack">
 
@@ -158,10 +180,10 @@
             android:id="@+id/spinner2"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_margin="2dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@color/colorBlack"
             android:entries="@array/grade_arrays"
-            android:textColor="@color/colorBlack"
-            android:backgroundTint="@color/colorBlack"/>
+            android:textColor="@color/colorBlack" />
     </LinearLayout>
 
     <Button
