@@ -147,6 +147,7 @@ public class EditModuleActivity extends AppCompatActivity {
                                 getApplicationContext(),
                                 R.string.module_delete,
                                 Toast.LENGTH_LONG).show();
+                        finish();
                     }catch (Exception e){
                         e.printStackTrace();
                     }
