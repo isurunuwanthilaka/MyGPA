@@ -21,22 +21,23 @@
             style="@style/HeaderBar"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:elevation="4dp" />
+            android:elevation="4dp"
+            tools:layout_editor_absoluteX="102dp"
+            tools:layout_editor_absoluteY="0dp" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/news"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="8dp"
             android:autoText="false"
             android:lineSpacingExtra="8sp"
             android:padding="8dp"
-            android:text="MyGPA-beta 2018/Oct Release\nShare your thoughts with us twitter.com/inuwanthilaka\nContribute at https://isurunuwanthilaka@bitbucket.org/isurunuwanthilaka/entc-android-app.git"
             android:textColor="@android:color/black"
             android:visibility="visible"
             app:fontFamily="serif"
@@ -44,50 +45,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <TextView
-            android:id="@+id/news"
-            android:layout_width="348dp"
-            android:layout_height="173dp"
-            android:layout_marginStart="18dp"
-            android:layout_marginLeft="18dp"
-            android:layout_marginEnd="18dp"
-            android:layout_marginRight="18dp"
-            android:paddingLeft="8dp"
-            android:paddingTop="8dp"
-            android:paddingRight="8dp"
-            android:paddingBottom="8dp"
-            android:textColor="@color/colorBlack"
-            app:fontFamily="serif"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="107dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="18dp"
-            android:layout_marginLeft="18dp"
-            android:layout_marginEnd="259dp"
-            android:layout_marginRight="259dp"
-            android:paddingLeft="8dp"
-            android:paddingTop="4dp"
-            android:paddingBottom="2dp"
-            android:text="Notes:"
-            android:textColor="@color/colorBlack"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:fontFamily="serif"
-            app:layout_constraintBottom_toTopOf="@+id/news"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_constraintVertical_chainStyle="packed" />
+            app:layout_constraintTop_toBottomOf="@+id/my_toolbar" />
 
 
     </android.support.constraint.ConstraintLayout>
