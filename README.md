@@ -30,4 +30,11 @@ MyGPA app is for making everyone's GPA smart.
 
 ## Gist
 
+Look at this to findout what modules have been entered to the database.
+If you need developer team to add new modules to the database request using the given template to info.isumalab@gmail.com
+
 [View Gist](https://gist.github.com/isurunuwanthilaka/170fa5a1defae9d10d244a339ea196e2)
+
+## Contact
+
+Drop a mail to info.isumalab@gmail.com
