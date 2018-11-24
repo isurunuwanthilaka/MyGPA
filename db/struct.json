@@ -16,7 +16,20 @@
 
   "module":{
     "EN0001":{
-      "departmentId":"1"
+      "departmentId":"1",
+      "semesterNo":"1",
+      "name":"moduleOne",
+      "credit":"4.2",
+      "active":true,
+      "gpa":true
+    },
+    "EN0002":{
+      "departmentId":"1",
+      "semesterNo":"1",
+      "name":"moduleTwo",
+      "credit":"4.2",
+      "active":true,
+      "gpa":true
     }
   },
 
