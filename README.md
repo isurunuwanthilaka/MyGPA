@@ -20,13 +20,13 @@ MyGPA app is for making everyone's GPA smart.
 
 ## Screenshots
 
-![alt image0](./doc/README/image0.png)
+![alt Home](./doc/README/img0.png)
 
-![alt image1](./doc/README/image1.png)
+![alt SEMESTERVIEW](./doc/README/img1.png)
 
-![alt image2](./doc/README/image2.png)
+![alt ADDMODULES](./doc/README/img2.png)
 
-![alt image3](./doc/README/image3.png)
+![alt EDITMODULES](./doc/README/img3.png)
 
 ## Gist
 
