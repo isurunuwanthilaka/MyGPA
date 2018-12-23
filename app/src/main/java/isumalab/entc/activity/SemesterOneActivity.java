@@ -81,7 +81,7 @@ public class SemesterOneActivity extends AppCompatActivity {
             finish();
         }
         if (id == R.id.action_info) {
-            Toast.makeText(this, "Minimum GPA Credits : 15.0\nMinimum Non-GPA Credits : 1.0", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Semester 1 ", Toast.LENGTH_LONG).show();
 //            Intent i = new Intent(this, InfoActivity.class);
 //            this.startActivity(i);
             return true;

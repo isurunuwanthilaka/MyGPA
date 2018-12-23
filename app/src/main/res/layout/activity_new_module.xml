@@ -53,7 +53,7 @@
         <TextView
             android:id="@+id/textView3"
             android:layout_width="140dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="4dp"
             android:paddingLeft="8dp"
             android:text="Module Code"
@@ -63,8 +63,8 @@
         <EditText
             android:id="@+id/edit_module_code"
             style="@android:style/Widget.AutoCompleteTextView"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_margin="4dp"
             android:layout_weight="1"
             android:background="@null"
@@ -74,6 +74,17 @@
             android:padding="1dp"
             android:textColor="@android:color/black"
             android:textCursorDrawable="@null" />
+
+        <Button
+            android:id="@+id/button_check"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_margin="2dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:text="Check"
+            android:textAllCaps="false"
+            android:visibility="visible" />
     </LinearLayout>
 
     <LinearLayout
@@ -131,11 +142,11 @@
         <TextView
             android:id="@+id/textView5"
             android:layout_width="140dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginLeft="4dp"
-            android:layout_marginTop="-2dp"
+            android:layout_marginTop="4dp"
             android:layout_marginRight="4dp"
-            android:layout_marginBottom="12dp"
+            android:layout_marginBottom="8dp"
             android:paddingLeft="8dp"
             android:text="Credits"
             android:textSize="18sp"

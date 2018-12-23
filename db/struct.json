@@ -1,0 +1,64 @@
+{
+  "news" : "MyGPA v1.0 2018/Oct Release\n\nWhat fixed in this release?\n* Added new icon.\n* Fixed bug in save button\n\nNow it's a one month.Thank you for being with us.\n\nLove or Hate? Tell us info.isumalab@gmail.com",
+  "user" : {
+    "1":{
+      "username" : "isuru",
+      "firstName":"Isuru",
+      "lastName":"Nuwanthilaka",
+      "email":"info.isumalab@gmail.com",
+      "universityId" : "1",
+      "departmentId":"1",
+      "createdAt":"0",
+      "modifiedAt":"0",
+      "data":{}
+    }
+  },
+
+  "module":{
+    "EN0001":{
+      "departmentId":"1",
+      "semesterNo":"1",
+      "name":"moduleOne",
+      "credit":"4.2",
+      "active":true,
+      "gpa":true
+    },
+    "EN0002":{
+      "departmentId":"1",
+      "semesterNo":"1",
+      "name":"moduleTwo",
+      "credit":"4.2",
+      "active":true,
+      "gpa":true
+    }
+  },
+
+  "university":{
+    "1":{
+      "name":"University of Moratuwa",
+      "country":"Sri Lanka"
+    }
+  },
+
+  "department":{
+   "1":{
+     "name":"ENTC",
+     "universityId":"1",
+     "gradingSystemId":"1"
+   },
+
+    "gradingSystem":{
+      "1":{
+        "Aplus" :"4.2",
+        "A"     :"4.0",
+        "Aminus":"3.7",
+        "Bplus" :"0",
+        "B"     :"0",
+        "Bminus":"0",
+        "Cplus" :"0",
+        "C"     :"0",
+        "Cminus":"0"
+      }
+    }
+  }
+}

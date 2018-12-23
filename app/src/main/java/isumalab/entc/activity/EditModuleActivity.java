@@ -75,7 +75,7 @@ public class EditModuleActivity extends AppCompatActivity {
 
         EditModuleView_MouduleName.setText(moduleName);
         EditModuleView_MouduleCode.setText(moduleCode);
-        rb1.setSelected(gpa);
+        radioGroup.check(getRadioButtonID(gpa));
         EditModuleView_MouduleCredit.setText(String.valueOf(credit));
         spinner2.setSelection(getGradePosition(score));
 
@@ -86,6 +86,10 @@ public class EditModuleActivity extends AppCompatActivity {
                 String spinner1_result = EditModuleView_MouduleCredit.getText().toString();
                 String spinner2_result = spinner2.getSelectedItem().toString();
                 if (TextUtils.isEmpty(EditModuleView_MouduleName.getText()) || TextUtils.isEmpty(EditModuleView_MouduleCode.getText()) || (selectedId == -1) || TextUtils.isEmpty(EditModuleView_MouduleCredit.getText()) || spinner2_result.isEmpty()) {
+                    Toast.makeText(
+                            getApplicationContext(),
+                            R.string.edit_save_msg,
+                            Toast.LENGTH_LONG).show();
                 } else {
                     radioButton = findViewById(selectedId);
                     String name = EditModuleView_MouduleName.getText().toString();
@@ -109,6 +113,7 @@ public class EditModuleActivity extends AppCompatActivity {
                                 getApplicationContext(),
                                 R.string.module_update,
                                 Toast.LENGTH_LONG).show();
+                        finish();
                     }catch (Exception e){
                         e.printStackTrace();
                     }
@@ -121,6 +126,7 @@ public class EditModuleActivity extends AppCompatActivity {
         button_del.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 if (TextUtils.isEmpty(EditModuleView_MouduleName.getText()) || TextUtils.isEmpty(EditModuleView_MouduleCode.getText())) {
+
                 } else {
                     String name = EditModuleView_MouduleName.getText().toString();
                     String code = EditModuleView_MouduleCode.getText().toString();
@@ -141,6 +147,7 @@ public class EditModuleActivity extends AppCompatActivity {
                                 getApplicationContext(),
                                 R.string.module_delete,
                                 Toast.LENGTH_LONG).show();
+                        finish();
                     }catch (Exception e){
                         e.printStackTrace();
                     }
@@ -148,6 +155,14 @@ public class EditModuleActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public int getRadioButtonID(boolean gpa){
+        if (gpa){
+            return rb1.getId();
+        }else{
+            return rb2.getId();
+        }
     }
 
     public boolean getStrBool(String s) {
