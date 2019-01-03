@@ -1,0 +1,504 @@
+{
+  "department": {
+    "1": {
+      "gradingSystemId": "1",
+      "name": "ENTC",
+      "universityId": "1"
+    }
+  },
+  "gradingSystem": {
+    "A": "4.0",
+    "Aminus": "3.7",
+    "Aplus": "4.2",
+    "B": "0",
+    "Bminus": "0",
+    "Bplus": "0",
+    "C": "0",
+    "Cminus": "0",
+    "Cplus": "0"
+  },
+  "module": {
+    "MA1013": {
+      "departmentId": "1",
+      "semesterNo": "1",
+      "name": "Mathematics",
+      "credit": "3.0",
+      "active": true,
+      "gpa": true
+    },
+    "CS1032": {
+      "departmentId": "1",
+      "semesterNo": "1",
+      "name": "Programming Fundamentals",
+      "credit": "3.0",
+      "active": true,
+      "gpa": true
+    },
+    "ME1032": {
+      "departmentId": "1",
+      "semesterNo": "1",
+      "name": "Mechanics",
+      "credit": "2.0",
+      "active": true,
+      "gpa": true
+    },
+    "MT1022": {
+      "departmentId": "1",
+      "semesterNo": "1",
+      "name": "Properties of Materials ",
+      "credit": "2.0",
+      "active": true,
+      "gpa": true
+    },
+    "CE1022": {
+      "departmentId": "1",
+      "semesterNo": "1",
+      "name": "Fluid Mechanics ",
+      "credit": "2.0",
+      "active": true,
+      "gpa": true
+    },
+    "EE1013": {
+      "departmentId": "1",
+      "semesterNo": "1",
+      "name": "Electrical Engineering",
+      "credit": "2.0",
+      "active": true,
+      "gpa": true
+    },
+    "EL1012": {
+      "departmentId": "1",
+      "semesterNo": "1",
+      "name": "anguage Skill Enhancement I ",
+      "credit": "1.0",
+      "active": true,
+      "gpa": true
+    },
+    "MN1012": {
+      "departmentId": "1",
+      "semesterNo": "1",
+      "name": "Engineering in Context",
+      "credit": "1.0",
+      "active": true,
+      "gpa": false
+    },
+    "MA1023": {
+      "departmentId": "1",
+      "semesterNo": "2",
+      "name": "Methods of Mathematics",
+      "credit": "3.0",
+      "active": true,
+      "gpa": true
+    },
+    "EN1012": {
+      "departmentId": "1",
+      "semesterNo": "2",
+      "name": "Electronic Devices and Circuits",
+      "credit": "2.0",
+      "active": true,
+      "gpa": true
+    },
+    "EN2042": {
+      "departmentId": "1",
+      "semesterNo": "2",
+      "name": "Electronic Product Manufacturing Processes",
+      "credit": "2.0",
+      "active": true,
+      "gpa": true
+    },
+    "EN1052": {
+      "departmentId": "1",
+      "semesterNo": "2",
+      "name": "Introduction to Telecommunications ",
+      "credit": "2.0",
+      "active": true,
+      "gpa": true
+    },
+    "EN1102": {
+      "departmentId": "1",
+      "semesterNo": "2",
+      "name": "Introduction to Computer Systems",
+      "credit": "2.0",
+      "active": true,
+      "gpa": true
+    },
+    "EN1092": {
+      "departmentId": "1",
+      "semesterNo": "2",
+      "name": "Laboratory Practice ",
+      "credit": "2.0",
+      "active": true,
+      "gpa": true
+    },
+    "EN2980": {
+      "departmentId": "1",
+      "semesterNo": "2",
+      "name": "Communication Skills ",
+      "credit": "2.0",
+      "active": true,
+      "gpa": true
+    },
+    "EN1140": {
+      "departmentId": "1",
+      "semesterNo": "2",
+      "name": "Engineering Design",
+      "credit": "3.0",
+      "active": true,
+      "gpa": false
+    },
+    "MA2013": {
+      "departmentId": "1",
+      "semesterNo": "3",
+      "name": "Differential Equations",
+      "credit": "2.0",
+      "active": true,
+      "gpa": true
+    },
+    "MA2023": {
+      "departmentId": "1",
+      "semesterNo": "3",
+      "name": "Calculus",
+      "credit": "2.0",
+      "active": true,
+      "gpa": true
+    },
+    "EN2012": {
+      "departmentId": "1",
+      "semesterNo": "3",
+      "name": "Analog Electronics",
+      "credit": "2.5",
+      "active": true,
+      "gpa": true
+    },
+    "EN2022": {
+      "departmentId": "1",
+      "semesterNo": "3",
+      "name": "Digital Electronics",
+      "credit": "2.5",
+      "active": true,
+      "gpa": true
+    },
+    "EN2052": {
+      "departmentId": "1",
+      "semesterNo": "3",
+      "name": "Communication Systems",
+      "credit": "2.5",
+      "active": true,
+      "gpa": true
+    },
+    "EN2062": {
+      "departmentId": "1",
+      "semesterNo": "3",
+      "name": "Signals and Systems",
+      "credit": "2.5",
+      "active": true,
+      "gpa": true
+    },
+    "EE2092": {
+      "departmentId": "1",
+      "semesterNo": "3",
+      "name": "Theory of Electricity",
+      "credit": "2.0",
+      "active": true,
+      "gpa": true
+    },
+    "EN2452": {
+      "departmentId": "1",
+      "semesterNo": "3",
+      "name": "Computer Organization ",
+      "credit": "2.5",
+      "active": true,
+      "gpa": true
+    },
+    "EN2532": {
+      "departmentId": "1",
+      "semesterNo": "3",
+      "name": "Robotics Design and Competition",
+      "credit": "2.5",
+      "active": true,
+      "gpa": true
+    },
+    "ME1822": {
+      "departmentId": "1",
+      "semesterNo": "3",
+      "name": "Basic Engineering Thermodynamics",
+      "credit": "2.0",
+      "active": true,
+      "gpa": true
+    },
+    "ME2122": {
+      "departmentId": "1",
+      "semesterNo": "3",
+      "name": "Engineering Drawing and Computer Aided Modelling",
+      "credit": "3.0",
+      "active": true,
+      "gpa": true
+    },
+    "CE1812": {
+      "departmentId": "1",
+      "semesterNo": "3",
+      "name": "Mechanics of Materials ",
+      "credit": "2.0",
+      "active": true,
+      "gpa": true
+    },
+    "MN1030": {
+      "departmentId": "1",
+      "semesterNo": "3",
+      "name": "Entrepreneurship Skill Development",
+      "credit": "1.0",
+      "active": true,
+      "gpa": false
+    },
+    "MA2033": {
+      "departmentId": "1",
+      "semesterNo": "4",
+      "name": "Linear Algebra",
+      "credit": "2.0",
+      "active": true,
+      "gpa": true
+    },
+    "EN3022": {
+      "departmentId": "1",
+      "semesterNo": "4",
+      "name": "Electronic Design and Realization",
+      "credit": "2.5",
+      "active": true,
+      "gpa": true
+    },
+    "EN2072": {
+      "departmentId": "1",
+      "semesterNo": "4",
+      "name": "Communications I",
+      "credit": "2.5",
+      "active": true,
+      "gpa": true
+    },
+    "EN2082": {
+      "departmentId": "1",
+      "semesterNo": "4",
+      "name": "Electromagnetics",
+      "credit": "2.5",
+      "active": true,
+      "gpa": true
+    },
+    "EN2142": {
+      "departmentId": "1",
+      "semesterNo": "4",
+      "name": "Electronic Control Systems",
+      "credit": "3.0",
+      "active": true,
+      "gpa": true
+    },
+    "EN2962": {
+      "departmentId": "1",
+      "semesterNo": "4",
+      "name": "Presentation Skills",
+      "credit": "1.0",
+      "active": true,
+      "gpa": false
+    },
+    "EN2902": {
+      "departmentId": "1",
+      "semesterNo": "4",
+      "name": "Field Visit",
+      "credit": "1.0",
+      "active": true,
+      "gpa": false
+    },
+    "CS2022": {
+      "departmentId": "1",
+      "semesterNo": "4",
+      "name": "Data Structures and Algorithms",
+      "credit": "2.5",
+      "active": true,
+      "gpa": true
+    },
+    "CS2042": {
+      "departmentId": "1",
+      "semesterNo": "4",
+      "name": "Operating Systems ",
+      "credit": "2.5",
+      "active": true,
+      "gpa": true
+    },
+    "CS2832": {
+      "departmentId": "1",
+      "semesterNo": "4",
+      "name": "Modular Software Development",
+      "credit": "3.0",
+      "active": true,
+      "gpa": true
+    },
+    "CS3042": {
+      "departmentId": "1",
+      "semesterNo": "4",
+      "name": "Database Systems",
+      "credit": "3.0",
+      "active": true,
+      "gpa": true
+    },
+    "EN2542": {
+      "departmentId": "1",
+      "semesterNo": "4",
+      "name": "Introduction to Biomedical Engineering",
+      "credit": "2.0",
+      "active": true,
+      "gpa": true
+    },
+    "EE2023": {
+      "departmentId": "1",
+      "semesterNo": "4",
+      "name": "Electrical Machines & Drives I",
+      "credit": "2.0",
+      "active": true,
+      "gpa": true
+    },
+    "EE2073": {
+      "departmentId": "1",
+      "semesterNo": "4",
+      "name": "Electrical Installation I",
+      "credit": "2.0",
+      "active": true,
+      "gpa": true
+    },
+    "MN2010": {
+      "departmentId": "1",
+      "semesterNo": "4",
+      "name": "Entrepreneurial Leadership",
+      "credit": "2.0",
+      "active": true,
+      "gpa": true
+    },
+    "EN3012": {
+      "departmentId": "1",
+      "semesterNo": "5",
+      "name": "Analog Circuit Design",
+      "credit": "2.5",
+      "active": true,
+      "gpa": true
+    },
+    "EN3052": {
+      "departmentId": "1",
+      "semesterNo": "5",
+      "name": "Communications II",
+      "credit": "2.5",
+      "active": true,
+      "gpa": true
+    },
+    "EN3322": {
+      "departmentId": "1",
+      "semesterNo": "5",
+      "name": "Digital Signal Processing",
+      "credit": "2.5",
+      "active": true,
+      "gpa": true
+    },
+    "EN3542": {
+      "departmentId": "1",
+      "semesterNo": "5",
+      "name": "Digital Systems Design",
+      "credit": "2.5",
+      "active": true,
+      "gpa": true
+    },
+    "CS3032": {
+      "departmentId": "1",
+      "semesterNo": "5",
+      "name": "Computer Networks",
+      "credit": "3.0",
+      "active": true,
+      "gpa": true
+    },
+    "EN3312": {
+      "departmentId": "1",
+      "semesterNo": "5",
+      "name": "Antennas and Propagation",
+      "credit": "2.5",
+      "active": true,
+      "gpa": true
+    },
+    "EN3532": {
+      "departmentId": "1",
+      "semesterNo": "5",
+      "name": "Electronic Instrumentation",
+      "credit": "2.5",
+      "active": true,
+      "gpa": true
+    },
+    "EN3552": {
+      "departmentId": "1",
+      "semesterNo": "5",
+      "name": "Fundamentals of Machine Vision & Image Processing",
+      "credit": "2.5",
+      "active": true,
+      "gpa": true
+    },
+    "EN3562": {
+      "departmentId": "1",
+      "semesterNo": "5",
+      "name": "Robotics",
+      "credit": "2.5",
+      "active": true,
+      "gpa": true
+    },
+    "EN3572": {
+      "departmentId": "1",
+      "semesterNo": "5",
+      "name": "Biomedical Signal Processing",
+      "credit": "2.5",
+      "active": true,
+      "gpa": true
+    },
+    "MA3013": {
+      "departmentId": "1",
+      "semesterNo": "5",
+      "name": "Applied Statistics",
+      "credit": "2.0",
+      "active": true,
+      "gpa": true
+    },
+    "MA3023": {
+      "departmentId": "1",
+      "semesterNo": "5",
+      "name": "Numerical Methods",
+      "credit": "2.0",
+      "active": true,
+      "gpa": true
+    },
+    "MN3042": {
+      "departmentId": "1",
+      "semesterNo": "5",
+      "name": "Business Economics & Financial Accounting",
+      "credit": "3.0",
+      "active": true,
+      "gpa": true
+    },
+    "MN3052": {
+      "departmentId": "1",
+      "semesterNo": "5",
+      "name": "Industrial Management & Marketing",
+      "credit": "3.0",
+      "active": true,
+      "gpa": true
+    }
+  },
+  "news": "MyGPA v1.0 2018/Oct Release\n\nWhat fixed in this release?\n* Added new icon.\n* Fixed bug in save button\n\nNow it's a one month.Thank you for being with us.\n\nLove or Hate? Tell us info.isumalab@gmail.com",
+  "university": {
+    "country": "Sri Lanka",
+    "name": "University of Moratuwa"
+  },
+  "user": [
+    null,
+    {
+      "createdAt": "0",
+      "departmentId": "1",
+      "email": "info.isumalab@gmail.com",
+      "firstName": "Isuru",
+      "lastName": "Nuwanthilaka",
+      "modifiedAt": "0",
+      "universityId": "1",
+      "username": "isuru"
+    }
+  ]
+}
