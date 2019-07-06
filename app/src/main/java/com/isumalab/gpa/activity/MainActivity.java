@@ -1,24 +1,22 @@
 package com.isumalab.gpa.activity;
 
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.text.TextUtils;
+import androidx.annotation.Nullable;
+
 import android.view.View;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
 
 import com.isumalab.gpa.R;
-import com.isumalab.gpa.entity.GpaEntity;
 import com.isumalab.gpa.entity.ModuleEntity;
 import com.isumalab.gpa.services.Calculation;
 import com.isumalab.gpa.utils.ModuleViewModel;

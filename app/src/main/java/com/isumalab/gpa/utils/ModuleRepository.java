@@ -1,13 +1,12 @@
 package com.isumalab.gpa.utils;
 
 import android.app.Application;
-import android.arch.lifecycle.LiveData;
+import androidx.lifecycle.LiveData;
 import android.os.AsyncTask;
 
 import java.util.List;
 
 import com.isumalab.gpa.dao.GpaDao;
-import com.isumalab.gpa.dao.GpaStaticDao;
 import com.isumalab.gpa.dao.ModuleDao;
 import com.isumalab.gpa.entity.GpaEntity;
 import com.isumalab.gpa.entity.ModuleEntity;
