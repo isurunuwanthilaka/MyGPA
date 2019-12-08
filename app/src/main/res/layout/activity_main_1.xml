@@ -9,7 +9,7 @@
     android:soundEffectsEnabled="false">
 
 
-    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/layout_main"
@@ -19,7 +19,7 @@
         android:scrollbarAlwaysDrawVerticalTrack="false"
         tools:context=".activity.MainActivity">
 
-        <android.support.v7.widget.Toolbar
+        <androidx.appcompat.widget.Toolbar
             android:id="@+id/my_toolbar"
             style="@style/HeaderBar"
             android:layout_width="match_parent"
@@ -29,7 +29,7 @@
             android:actionMenuTextColor="@android:color/white"
             />
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/card_view"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -106,7 +106,7 @@
             </RelativeLayout>
             >
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/sem1"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -177,9 +177,9 @@
                         app:srcCompat="@drawable/back" />
 
                 </RelativeLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/sem2"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -245,9 +245,9 @@
                         app:srcCompat="@drawable/back" />
 
                 </RelativeLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/sem3"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -313,9 +313,9 @@
                         app:srcCompat="@drawable/back" />
 
                 </RelativeLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/sem4"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -381,9 +381,9 @@
                         app:srcCompat="@drawable/back" />
 
                 </RelativeLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/sem5"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -449,9 +449,9 @@
                         app:srcCompat="@drawable/back" />
 
                 </RelativeLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/sem6"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -517,9 +517,9 @@
                         app:srcCompat="@drawable/back" />
 
                 </RelativeLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/sem7"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -585,9 +585,9 @@
                         app:srcCompat="@drawable/back" />
 
                 </RelativeLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/sem8"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -652,9 +652,9 @@
                         app:srcCompat="@drawable/back" />
 
                 </RelativeLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

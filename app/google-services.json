@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "793516849900",
+    "firebase_url": "https://entc-gpa-wallet.firebaseio.com",
+    "project_id": "entc-gpa-wallet",
+    "storage_bucket": "entc-gpa-wallet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:793516849900:android:f76842ab31003b16",
+        "android_client_info": {
+          "package_name": "com.isumalab.gpa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "793516849900-ktcl5gjpsri133q92mtturut8gkpvjhb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.isumalab.gpa",
+            "certificate_hash": "4b4696d24eede1cbe17ec30e97fc7697ef81ac4d"
+          }
+        },
+        {
+          "client_id": "793516849900-itos6dqk041gj6sfholbnkbifk9don2t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkxT9vCDdQh46mf_ya4WQZl5Ma03ig4-U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "793516849900-itos6dqk041gj6sfholbnkbifk9don2t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
